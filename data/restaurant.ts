@@ -28,7 +28,7 @@ export const restaurantInfo = {
     dimanche: null, // Closed
   },
   reservationUrl: '/contact#reservation',
-  googleMapsUrl: 'https://maps.google.com',
+  googleMapsUrl: 'https://maps.app.goo.gl/CsKc6rc471n63fV86',
 }
 
 // Menu categories and items

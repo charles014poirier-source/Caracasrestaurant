@@ -3,7 +3,7 @@ import { Button } from '@/components/Button'
 import { SignatureCard } from '@/components/Card'
 import { ScrollReveal } from '@/components/ScrollReveal'
 import { restaurantInfo, signatureDishes, experiences, reviews, galleryImages, events, glossary } from '@/data/restaurant'
-import { Star, Clock, MapPin, ArrowRight } from 'lucide-react'
+import { Star, Clock, MapPin, ArrowRight, Utensils } from 'lucide-react'
 import Link from 'next/link'
 
 export default function HomePage() {
@@ -38,12 +38,32 @@ export default function HomePage() {
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12 animate-slide-up stagger-2">
               <Button
                 size="lg"
-                className="!bg-gradient-to-r !from-secondary-400 !to-secondary-600 !text-white !border-0 hover:!shadow-glow hover:!scale-105 hover:!from-secondary-300 hover:!to-secondary-500 transition-all duration-300 !rounded-full relative overflow-hidden group"
+                className="!bg-gradient-to-r !from-secondary-400 !to-secondary-600 !text-white !border-0 hover:!shadow-glow hover:!scale-105 hover:!from-secondary-300 hover:!to-secondary-500 transition-all duration-300 !rounded-full relative overflow-hidden group !px-8 !py-6"
                 asChild
               >
                 <Link href="/menu" className="relative z-10">
-                  <span className="relative z-10">La carte</span>
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                  {/* Animated background gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-secondary-400 via-secondary-500 to-secondary-600 animate-gradient-shift" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+                  {/* Pulsing ring effect */}
+                  <div className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping opacity-0 group-hover:opacity-100" />
+                  <div className="absolute inset-0 rounded-full border border-white/20 group-hover:animate-pulse" />
+
+                  {/* Content */}
+                  <div className="relative z-10 flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <Utensils className="w-5 h-5 text-white/90" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-bold text-lg leading-tight">La carte</span>
+                        <span className="text-xs text-white/80 font-medium">Arepas • Tapas • Cocktails</span>
+                      </div>
+                    </div>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300" />
+                  </div>
+
+                  {/* Shine effect */}
+                  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 group-hover:animate-shine" />
                 </Link>
               </Button>
               <Button

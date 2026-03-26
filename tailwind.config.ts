@@ -121,6 +121,7 @@ const config: Config = {
         'shine': 'shine 2.5s infinite',
         'bounce-slow': 'bounceSlow 2s infinite',
         'arrow-slide': 'arrowSlide 1.5s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 3s ease infinite',
       },
       keyframes: {
         fadeIn: {
@@ -158,6 +159,10 @@ const config: Config = {
         arrowSlide: {
           '0%, 100%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(5px)' },
+        },
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
       backgroundImage: {
