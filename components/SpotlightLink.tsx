@@ -57,8 +57,7 @@ export function SpotlightLink({ href, children, className = '' }: SpotlightLinkP
           'absolute rounded-full pointer-events-none',
           'bg-radial-gradient from-secondary-400/40 to-transparent',
           'transition-opacity duration-150 ease-out',
-          isHovered || isActive ? 'opacity-100' : 'opacity-0',
-          isActive && !isHovered ? 'duration-300' : ''
+          isHovered ? 'opacity-100' : 'opacity-0'
         )}
         style={{
           width: '200px',
