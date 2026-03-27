@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import ButtonWithIconDemo from "@/components/ui/button-with-icon"
 import { Menu, X, MapPin } from 'lucide-react'
+import { SpotlightLink } from '@/components/SpotlightLink'
 
 const navigation = [
   { name: 'Menu', href: '/menu' },
@@ -116,19 +117,12 @@ export function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center justify-center gap-10 flex-1 -ml-20">
               {navigation.map((item) => (
-                <Link
+                <SpotlightLink
                   key={item.name}
                   href={item.href}
-                  className={cn(
-                    'text-base font-semibold transition-all duration-200 hover:text-secondary-600 relative py-2',
-                    pathname === item.href || (item.href.startsWith('/#') && pathname === '/')
-                      ? 'text-neutral-900'
-                      : 'text-neutral-700',
-                    'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary-500 after:transition-all after:duration-300 hover:after:w-full'
-                  )}
                 >
                   {item.name}
-                </Link>
+                </SpotlightLink>
               ))}
             </nav>
 
