@@ -331,22 +331,31 @@ export default function ContactContent() {
               {/* Social */}
               <div className="pt-4">
                 <h4 className="font-semibold text-neutral-900 mb-3">Suivez-nous</h4>
-                <div className="flex gap-3">
+                <div className="flex gap-2">
+                  {/* Instagram */}
                   <a
                     href={restaurantInfo.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3 rounded-lg bg-background-100 text-neutral-900 font-medium hover:bg-primary-500 hover:text-white transition-colors"
+                    className="group flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
                   >
-                    Instagram
+                    <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <span className="text-sm">Instagram</span>
                   </a>
+
+                  {/* Facebook */}
                   <a
                     href={restaurantInfo.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3 rounded-lg bg-background-100 text-neutral-900 font-medium hover:bg-primary-500 hover:text-white transition-colors"
+                    className="group flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
                   >
-                    Facebook
+                    <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span className="text-sm">Facebook</span>
                   </a>
                 </div>
               </div>
@@ -354,17 +363,43 @@ export default function ContactContent() {
 
             {/* Map placeholder */}
             <div className="mt-8">
-              <div className="aspect-video w-full rounded-card bg-background-100 flex items-center justify-center">
-                <a
-                  href={restaurantInfo.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-background-50 rounded-card shadow-soft hover:shadow-medium transition-shadow"
-                >
-                  <MapPin className="w-5 h-5 text-primary-600" />
-                  <span className="font-medium">Voir sur Google Maps</span>
-                </a>
-              </div>
+              <a
+                href={restaurantInfo.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="aspect-video w-full bg-gradient-to-br from-slate-700 to-slate-900 relative">
+                  {/* Map background pattern */}
+                  <div className="absolute inset-0 opacity-30">
+                    <img
+                      src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
+                      alt="Google Maps"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
+
+                  {/* Content overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <MapPin className="w-8 h-8 text-white" />
+                      </div>
+                      <h4 className="text-white font-serif text-xl mb-2">
+                        Caracas Bar & Tapas
+                      </h4>
+                      <p className="text-white/80 text-sm mb-4">
+                        {restaurantInfo.address.street}, {restaurantInfo.address.city}
+                      </p>
+                      <div className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 rounded-full font-semibold shadow-lg group-hover:bg-white/90 transition-colors">
+                        <span>Ouvrir dans Google Maps</span>
+                        <MapPin className="w-4 h-4" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -373,42 +408,94 @@ export default function ContactContent() {
       {/* Access Section */}
       <Section background="background-100">
         <div className="max-w-3xl mx-auto">
-          <SectionHeader
-            title="Comment nous rejoindre"
-            align="center"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-background-50 rounded-card p-6">
-              <div className="text-3xl mb-3">🚇</div>
-              <h4 className="font-serif text-lg text-neutral-900 mb-2">Métro</h4>
-              <p className="text-neutral-600 text-sm leading-relaxed">
-                Ligne 3 : Station Anatole France<br />
-                Ligne 13 : Station Pont de Levallois
-              </p>
-            </div>
-            <div className="bg-background-50 rounded-card p-6">
-              <div className="text-3xl mb-3">🚌</div>
-              <h4 className="font-serif text-lg text-neutral-900 mb-2">Bus</h4>
-              <p className="text-neutral-600 text-sm leading-relaxed">
-                Lignes 94, 163, 175, 274<br />
-                Arrêt : Anatole France - Jean Jaurès
-              </p>
-            </div>
-            <div className="bg-background-50 rounded-card p-6">
-              <div className="text-3xl mb-3">🚗</div>
-              <h4 className="font-serif text-lg text-neutral-900 mb-2">Voiture</h4>
-              <p className="text-neutral-600 text-sm leading-relaxed">
-                Parking public : Rue de la République<br />
-                Parking Kléber : 5 min à pied
-              </p>
-            </div>
-            <div className="bg-background-50 rounded-card p-6">
-              <div className="text-3xl mb-3">🚲</div>
-              <h4 className="font-serif text-lg text-neutral-900 mb-2">Vélib</h4>
-              <p className="text-neutral-600 text-sm leading-relaxed">
-                Station Anatole France<br />
-                Station Jean Jaurès
-              </p>
+          <div className="text-center mb-12">
+            <p className="text-primary-600 font-semibold tracking-wide uppercase mb-3">
+              Accès
+            </p>
+            <h2 className="font-serif text-display-md text-neutral-900 mb-4">
+              Comment nous rejoindre
+            </h2>
+            <p className="text-neutral-600">
+              Situé à Levallois-Perret, facilement accessible depuis Paris
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Métro */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-neutral-900 mb-2">Métro</h3>
+                  <div className="space-y-1 text-sm text-neutral-600">
+                    <p>Ligne 3 : Anatole France</p>
+                    <p>Ligne 13 : Pont de Levallois</p>
+                    <p className="text-neutral-500 mt-2">2 min à pied</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bus */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-neutral-900 mb-2">Bus</h3>
+                  <div className="space-y-1 text-sm text-neutral-600">
+                    <p>Lignes 94, 163, 175, 274</p>
+                    <p className="text-neutral-500 mt-2">Arrêt Anatole France - Jean Jaurès</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Voiture */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-neutral-900 mb-2">Voiture</h3>
+                  <div className="space-y-1 text-sm text-neutral-600">
+                    <p>Parking Rue de la République</p>
+                    <p>Parking Kléber</p>
+                    <p className="text-neutral-500 mt-2">5 min à pied</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Vélib */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-neutral-900 mb-2">Vélib'</h3>
+                  <div className="space-y-1 text-sm text-neutral-600">
+                    <p>Station Anatole France</p>
+                    <p>Station Jean Jaurès</p>
+                    <p className="text-neutral-500 mt-2">50-150 mètres</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { Section, SectionHeader } from '@/components/Section'
 import { Button } from '@/components/Button'
 import { Badge, AllergenBadge } from '@/components/Badge'
@@ -10,7 +11,10 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 export default function MenuContent() {
-  const [activeCategory, setActiveCategory] = useState('a-partager')
+  const searchParams = useSearchParams()
+  const categoryParam = searchParams.get('category')
+
+  const [activeCategory, setActiveCategory] = useState(categoryParam || 'a-partager')
   const [isSticky, setIsSticky] = useState(false)
 
   // Get best sellers
@@ -23,6 +27,20 @@ export default function MenuContent() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Update category when URL param changes
+  useEffect(() => {
+    if (categoryParam && menuCategories.find(c => c.id === categoryParam)) {
+      setActiveCategory(categoryParam)
+      // Scroll to menu items section after a short delay
+      setTimeout(() => {
+        const menuSection = document.getElementById('menu-items')
+        if (menuSection) {
+          menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
+  }, [categoryParam])
 
   const filteredItems = menuItems.filter(item => item.category === activeCategory)
 
@@ -61,28 +79,89 @@ export default function MenuContent() {
             Les Best-Sellers
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {bestSellers.slice(0, 4).map((item) => (
             <div
               key={item.id}
-              className="bg-background-50 rounded-card p-4 shadow-soft hover:shadow-medium transition-shadow"
+              className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 border-neutral-100 hover:border-orange-200"
             >
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <h3 className="font-serif text-base text-neutral-900 leading-tight">
+              {/* Image section */}
+              {item.image ? (
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+                  {/* Badges overlay */}
+                  {item.badges && item.badges.length > 0 && (
+                    <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                      {item.badges.filter(badge => badge !== 'bestseller').map((badge) => (
+                        <span
+                          key={badge}
+                          className="inline-flex items-center gap-1 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold shadow-md border-2 border-orange-200"
+                        >
+                          {badge === 'spicy' && '🌶️ Épicé'}
+                          {badge === 'veggie' && '🌿 Végétarien'}
+                          {badge === 'new' && '✨ Nouveau'}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Price badge */}
+                  <div className="absolute bottom-4 right-4">
+                    <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                      <span className="text-2xl font-bold text-orange-600">
+                        {item.price.toFixed(2)}€
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* No image fallback */
+                <div className="relative h-48 bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center">
+                  {item.badges && item.badges.filter(badge => badge !== 'bestseller').length > 0 && (
+                    <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                      {item.badges.filter(badge => badge !== 'bestseller').map((badge) => (
+                        <Badge key={badge} type={badge} size="sm" />
+                      ))}
+                    </div>
+                  )}
+                  <div className="absolute bottom-4 right-4">
+                    <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                      <span className="text-2xl font-bold text-orange-600">
+                        {item.price.toFixed(2)}€
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Content section */}
+              <div className="p-5">
+                <h3 className="font-serif text-xl font-bold text-neutral-900 mb-2 group-hover:text-orange-700 transition-colors">
                   {item.name}
                 </h3>
-                <span className="text-primary-600 font-semibold flex-shrink-0">
-                  {item.price.toFixed(2)}€
-                </span>
+                <p className="text-neutral-700 text-sm leading-relaxed line-clamp-2 mb-3">
+                  {item.description}
+                </p>
+
+                {/* CTA indicator */}
+                <div className="flex items-center gap-2 text-orange-600 font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span>Voir les détails</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <p className="text-sm text-neutral-600 line-clamp-2 mb-2">
-                {item.description}
-              </p>
-              <div className="flex flex-wrap gap-1">
-                {item.badges?.slice(0, 2).map((badge) => (
-                  <Badge key={badge} type={badge} size="sm" />
-                ))}
-              </div>
+
+              {/* Shine effect */}
+              <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 group-hover:animate-shine pointer-events-none" />
             </div>
           ))}
         </div>
@@ -117,7 +196,7 @@ export default function MenuContent() {
       </div>
 
       {/* Menu Items */}
-      <Section background="white">
+      <Section id="menu-items" background="white">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <h2 className="font-serif text-display-md text-neutral-900 mb-2">
@@ -128,47 +207,87 @@ export default function MenuContent() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className="group bg-background-100 rounded-card p-5 hover:bg-background-200 transition-colors"
+                className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 border-neutral-100 hover:border-orange-200"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="flex items-start gap-4">
-                  {/* Badges */}
-                  {item.badges && item.badges.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5 min-w-[80px]">
-                      {item.badges.map((badge) => (
-                        <Badge key={badge} type={badge} size="sm" />
-                      ))}
-                    </div>
-                  )}
+                {/* Image section */}
+                {item.image ? (
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    {/* Overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-start justify-between gap-3 mb-2">
-                      <h3 className="font-serif text-lg text-neutral-900 leading-snug">
-                        {item.name}
-                      </h3>
-                      <span className="text-lg font-semibold text-primary-600 flex-shrink-0">
-                        {item.price.toFixed(2)}€
-                      </span>
-                    </div>
-                    <p className="text-neutral-600 text-body leading-relaxed mb-3">
-                      {item.description}
-                    </p>
-
-                    {/* Allergens */}
-                    {item.allergens && item.allergens.length > 0 && (
-                      <div className="flex flex-wrap gap-1">
-                        {item.allergens.map((allergen) => (
-                          <AllergenBadge key={allergen} allergen={allergen} />
+                    {/* Badges overlay */}
+                    {item.badges && item.badges.length > 0 && (
+                      <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                        {item.badges.map((badge) => (
+                          <span
+                            key={badge}
+                            className="inline-flex items-center gap-1 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold shadow-md border-2 border-orange-200"
+                          >
+                            {badge === 'bestseller' && '⭐ Best-seller'}
+                            {badge === 'spicy' && '🌶️ Épicé'}
+                            {badge === 'veggie' && '🌿 Végétarien'}
+                            {badge === 'new' && '✨ Nouveau'}
+                          </span>
                         ))}
                       </div>
                     )}
+
+                    {/* Price badge */}
+                    <div className="absolute top-4 right-4">
+                      <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+                        {item.price.toFixed(2)}€
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  /* No image fallback */
+                  <div className="relative h-32 bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center">
+                    {item.badges && item.badges.length > 0 && (
+                      <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                        {item.badges.map((badge) => (
+                          <Badge key={badge} type={badge} size="sm" />
+                        ))}
+                      </div>
+                    )}
+                    <div className="absolute top-4 right-4">
+                      <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+                        {item.price.toFixed(2)}€
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Content section */}
+                <div className="p-6">
+                  <h3 className="font-serif text-2xl font-bold text-neutral-900 mb-3 group-hover:text-orange-700 transition-colors">
+                    {item.name}
+                  </h3>
+                  <p className="text-neutral-700 leading-relaxed mb-4 text-body">
+                    {item.description}
+                  </p>
+
+                  {/* CTA indicator */}
+                  <div className="flex items-center gap-2 text-orange-600 font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>En savoir plus</span>
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </div>
                 </div>
+
+                {/* Shine effect */}
+                <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 group-hover:animate-shine pointer-events-none" />
               </div>
             ))}
           </div>

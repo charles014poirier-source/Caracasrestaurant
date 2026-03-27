@@ -215,6 +215,79 @@ export const Footer7 = ({
           )}
         </div>
 
+        {/* Reservation CTA Banner */}
+        <div className="mt-12 mb-8">
+          <div className="relative max-w-4xl mx-auto rounded-3xl overflow-hidden bg-gradient-to-br from-primary-50 to-emerald-50 border-2 border-primary-200/50 shadow-xl">
+            {/* Animated background elements */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-200/20 to-emerald-200/20 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-secondary-200/20 to-primary-200/20 rounded-full blur-3xl animate-pulse delay-700" />
+            </div>
+
+            {/* Subtle pattern overlay */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23059669' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")`,
+              }} />
+            </div>
+
+            <div className="relative z-10 p-6 md:p-8">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                {/* Left side - Content */}
+                <div className="flex items-center gap-4 flex-1">
+                  {/* Icon */}
+                  <div className="flex-shrink-0">
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-emerald-600 rounded-2xl animate-pulse" />
+                      <div className="relative w-16 h-16 bg-gradient-to-br from-primary-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Text */}
+                  <div>
+                    <h4 className="font-serif text-xl md:text-2xl font-bold text-neutral-900 mb-1">
+                      Réservez votre table
+                    </h4>
+                    <p className="text-neutral-600 text-sm md:text-base">
+                      Places limitées • Week-end chargé
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right side - CTA Button */}
+                <a
+                  href="/contact#reservation"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-500 via-emerald-500 to-teal-500 text-white rounded-2xl font-bold text-base shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 whitespace-nowrap overflow-hidden"
+                >
+                  {/* Animated gradient background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600 via-emerald-600 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  {/* Shine effect */}
+                  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 group-hover:animate-shine" />
+
+                  {/* Pulsing ring */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-white/30 animate-ping opacity-0 group-hover:opacity-100" />
+
+                  {/* Content */}
+                  <div className="relative z-10 flex items-center gap-3">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span className="text-lg">Réserver</span>
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">

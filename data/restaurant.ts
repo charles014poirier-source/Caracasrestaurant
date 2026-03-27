@@ -43,6 +43,7 @@ export interface MenuItem {
   category: string
   badges?: BadgeType[]
   allergens?: AllergenType[]
+  image?: string
 }
 
 export const menuCategories = [
@@ -66,6 +67,7 @@ export const menuItems: MenuItem[] = [
     category: 'a-partager',
     badges: ['veggie', 'bestseller'],
     allergens: ['Gluten'],
+    image: 'https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=600&q=80',
   },
   {
     id: 'tequenos',
@@ -75,6 +77,7 @@ export const menuItems: MenuItem[] = [
     category: 'a-partager',
     badges: ['bestseller'],
     allergens: ['Gluten', 'Lait', 'Œufs'],
+    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&q=80',
   },
   {
     id: 'tostones',
@@ -84,6 +87,7 @@ export const menuItems: MenuItem[] = [
     category: 'a-partager',
     badges: ['veggie'],
     allergens: [],
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80',
   },
 
   // Arepas
@@ -95,6 +99,7 @@ export const menuItems: MenuItem[] = [
     category: 'arepas',
     badges: ['bestseller'],
     allergens: ['Gluten', 'Œufs', 'Lait'],
+    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&q=80',
   },
   {
     id: 'arepa-pabellon',
@@ -104,6 +109,7 @@ export const menuItems: MenuItem[] = [
     category: 'arepas',
     badges: ['bestseller'],
     allergens: ['Gluten', 'Lait'],
+    image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=80',
   },
   {
     id: 'arepa-domino',
@@ -113,6 +119,7 @@ export const menuItems: MenuItem[] = [
     category: 'arepas',
     badges: ['veggie'],
     allergens: ['Gluten', 'Lait'],
+    image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&q=80',
   },
   {
     id: 'arepa-pelua',
@@ -121,6 +128,7 @@ export const menuItems: MenuItem[] = [
     price: 13.50,
     category: 'arepas',
     allergens: ['Gluten', 'Lait'],
+    image: 'https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=600&q=80',
   },
 
   // Cachapas
@@ -132,6 +140,7 @@ export const menuItems: MenuItem[] = [
     category: 'cachapas',
     badges: ['bestseller'],
     allergens: ['Œufs', 'Lait'],
+    image: 'https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?w=600&q=80',
   },
   {
     id: 'cachapa-pabellon',
@@ -140,6 +149,7 @@ export const menuItems: MenuItem[] = [
     price: 15.50,
     category: 'cachapas',
     allergens: ['Œufs', 'Lait'],
+    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80',
   },
 
   // Tapas
@@ -151,6 +161,7 @@ export const menuItems: MenuItem[] = [
     category: 'tapas',
     badges: ['bestseller'],
     allergens: ['Gluten', 'Lait', 'Œufs'],
+    image: 'https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=600&q=80',
   },
   {
     id: 'croquetas',
@@ -159,6 +170,7 @@ export const menuItems: MenuItem[] = [
     price: 9.00,
     category: 'tapas',
     allergens: ['Gluten', 'Lait', 'Œufs'],
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80',
   },
   {
     id: 'albondigas',
@@ -167,6 +179,7 @@ export const menuItems: MenuItem[] = [
     price: 11.50,
     category: 'tapas',
     allergens: ['Gluten', 'Œufs'],
+    image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600&q=80',
   },
   {
     id: 'pulpo',
@@ -176,6 +189,7 @@ export const menuItems: MenuItem[] = [
     category: 'tapas',
     badges: ['spicy'],
     allergens: ['Mollusques'],
+    image: 'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=600&q=80',
   },
 
   // Plats
@@ -206,6 +220,7 @@ export const menuItems: MenuItem[] = [
     category: 'desserts',
     badges: ['bestseller'],
     allergens: ['Œufs', 'Lait'],
+    image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=600&q=80',
   },
   {
     id: 'golfeados',
@@ -214,6 +229,7 @@ export const menuItems: MenuItem[] = [
     price: 8.00,
     category: 'desserts',
     allergens: ['Gluten', 'Lait', 'Œufs'],
+    image: 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=600&q=80',
   },
   {
     id: 'torta-chocolate',
@@ -222,6 +238,7 @@ export const menuItems: MenuItem[] = [
     price: 9.00,
     category: 'desserts',
     allergens: ['Œufs', 'Lait'],
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80',
   },
 
   // Cocktails
@@ -233,6 +250,7 @@ export const menuItems: MenuItem[] = [
     category: 'cocktails',
     badges: ['bestseller'],
     allergens: ['Sulfites'],
+    image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80',
   },
   {
     id: 'caipirinha',
@@ -241,6 +259,7 @@ export const menuItems: MenuItem[] = [
     price: 11.00,
     category: 'cocktails',
     allergens: ['Sulfites'],
+    image: 'https://images.unsplash.com/photo-1536935338788-843bb759c483?w=600&q=80',
   },
   {
     id: 'pisco-sour',
@@ -250,6 +269,7 @@ export const menuItems: MenuItem[] = [
     category: 'cocktails',
     badges: ['new'],
     allergens: ['Œufs', 'Sulfites'],
+    image: 'https://images.unsplash.com/photo-1560512823-829485b8bf24?w=600&q=80',
   },
   {
     id: 'daiquiri',
@@ -258,6 +278,7 @@ export const menuItems: MenuItem[] = [
     price: 11.00,
     category: 'cocktails',
     allergens: ['Sulfites'],
+    image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80',
   },
   {
     id: 'margarita',
@@ -266,6 +287,7 @@ export const menuItems: MenuItem[] = [
     price: 11.00,
     category: 'cocktails',
     allergens: ['Sulfites'],
+    image: 'https://images.unsplash.com/photo-1575023782549-62ca0d244b39?w=600&q=80',
   },
 
   // Sans alcool
@@ -277,6 +299,7 @@ export const menuItems: MenuItem[] = [
     category: 'sans-alcool',
     badges: ['bestseller'],
     allergens: [],
+    image: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80',
   },
   {
     id: 'chicha',
@@ -286,6 +309,7 @@ export const menuItems: MenuItem[] = [
     category: 'sans-alcool',
     badges: ['veggie'],
     allergens: ['Lait'],
+    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80',
   },
   {
     id: 'limonada',
@@ -295,6 +319,7 @@ export const menuItems: MenuItem[] = [
     category: 'sans-alcool',
     badges: ['veggie'],
     allergens: [],
+    image: 'https://images.unsplash.com/photo-1583895416981-40db4e8fcfe3?w=600&q=80',
   },
 ]
 
@@ -307,6 +332,7 @@ export const signatureDishes = [
     price: 13.50,
     image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&q=80',
     badges: ['bestseller'] as BadgeType[],
+    category: 'arepas',
   },
   {
     id: 'empanadas-sig',
@@ -315,6 +341,7 @@ export const signatureDishes = [
     price: 11.00,
     image: 'https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=600&q=80',
     badges: ['bestseller'] as BadgeType[],
+    category: 'tapas',
   },
   {
     id: 'pabellon-sig',
@@ -323,6 +350,7 @@ export const signatureDishes = [
     price: 21.00,
     image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=80',
     badges: ['bestseller'] as BadgeType[],
+    category: 'plats',
   },
   {
     id: 'cachapa-sig',
@@ -331,6 +359,7 @@ export const signatureDishes = [
     price: 12.50,
     image: 'https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?w=600&q=80',
     badges: ['bestseller'] as BadgeType[],
+    category: 'cachapas',
   },
   {
     id: 'mojito-sig',
@@ -339,6 +368,7 @@ export const signatureDishes = [
     price: 11.00,
     image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80',
     badges: ['bestseller'] as BadgeType[],
+    category: 'cocktails',
   },
   {
     id: 'quesillo-sig',
@@ -347,6 +377,7 @@ export const signatureDishes = [
     price: 7.50,
     image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=600&q=80',
     badges: ['bestseller'] as BadgeType[],
+    category: 'desserts',
   },
 ]
 
@@ -417,16 +448,19 @@ export const events = [
     title: 'Afterwork & Tapas',
     description: 'Chaque jeudi, formules tapas à partager entre collègues ou amis. Ambiance musicale garantie.',
     icon: '🍹',
+    image: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80',
   },
   {
     title: 'Privatisation Étage',
     description: 'Notre étage peut accueillir vos événements jusqu\'à 40 personnes. Formules sur mesure.',
     icon: '🎉',
+    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80',
   },
   {
     title: 'Traiteur & Cocktails',
     description: 'Nous apportons nos saveurs chez vous pour vos événements privés ou professionnels.',
     icon: '🍽️',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80',
   },
 ]
 

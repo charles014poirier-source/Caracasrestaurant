@@ -296,12 +296,19 @@ export default function HomePage() {
             return (
               <ScrollReveal key={index} direction="up" delay={index * 0.12}>
                 <div className="bg-white rounded-2xl shadow-soft hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full overflow-hidden group">
-                  {/* Icon header with gradient */}
-                  <div className={`relative ${ctaConfig.iconBg} p-8 flex items-center justify-center`}>
-                    <div className="text-6xl transform group-hover:scale-110 transition-transform duration-300">
-                      {event.icon}
+                  {/* Image header with overlay and icon */}
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-6xl transform group-hover:scale-110 transition-transform duration-300 drop-shadow-2xl">
+                        {event.icon}
+                      </div>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
                   </div>
 
                   {/* Content */}
