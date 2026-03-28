@@ -1,5 +1,6 @@
 import React from "react";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Clock } from "lucide-react";
+import { ContactData, BrandingConfig } from '@/data/types/client'
 
 interface Footer7Props {
   logo?: {
@@ -21,12 +22,9 @@ interface Footer7Props {
     name: string;
     href: string;
   }>;
-  contactInfo?: {
-    address?: string;
-    phone?: string;
-    email?: string;
-  };
+  contactInfo?: ContactData;
   hours?: Record<string, string | null>;
+  config?: BrandingConfig;
 }
 
 const defaultSections = [
@@ -91,11 +89,9 @@ export const Footer7 = ({
   socialLinks = defaultSocialLinks,
   copyright = "© 2025 Caracas Bar & Tapas. Tous droits réservés.",
   legalLinks = defaultLegalLinks,
-  contactInfo = {
-    address: "123 Rue de Paris, 92300 Levallois-Perret",
-    phone: "01 23 45 67 89",
-    email: "contact@caracas-bar-tapas.fr",
-  },
+  contactInfo,
+  hours,
+  config,
 }: Footer7Props) => {
   return (
     <footer className="bg-gradient-to-br from-secondary-700 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
@@ -114,11 +110,11 @@ export const Footer7 = ({
           <div className="flex-1 max-w-md">
             <a href={logo.url} className="inline-block mb-6">
               <span className="font-serif text-3xl font-bold text-white/90 tracking-tight">
-                Caracas<span className="text-white/60">.</span>
+                {config?.name.split(' ')[0] || 'Caracas'}<span className="text-white/60">.</span>
               </span>
             </a>
             <p className="text-white/80 leading-relaxed mb-6">
-              {description}
+              {config?.description || description}
             </p>
 
             {/* Contact info */}
