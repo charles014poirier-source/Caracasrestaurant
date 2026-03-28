@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Section, SectionHeader } from '@/components/Section'
 import { Button } from '@/components/Button'
-import { restaurantInfo } from '@/data/restaurant'
+import { restaurantInfo } from '@/data/clients/caracas/contact'
 import { MapPin, Phone, Mail, Clock, Send, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 
@@ -251,8 +251,8 @@ export default function ContactContent() {
                 <div>
                   <h4 className="font-semibold text-neutral-900 mb-1">Adresse</h4>
                   <address className="not-italic text-neutral-600 leading-relaxed">
-                    {restaurantInfo.address.street}<br />
-                    {restaurantInfo.address.city}
+                    {restaurantInfo.street}<br />
+                    {restaurantInfo.city}
                   </address>
                   <a
                     href={restaurantInfo.googleMapsUrl}
@@ -304,10 +304,10 @@ export default function ContactContent() {
                 <div>
                   <h4 className="font-semibold text-neutral-900 mb-1">Téléphone</h4>
                   <a
-                    href={`tel:${restaurantInfo.contact.phoneLink}`}
+                    href={`tel:${restaurantInfo.phoneLink}`}
                     className="text-neutral-600 hover:text-primary-600 transition-colors text-lg"
                   >
-                    {restaurantInfo.contact.phone}
+                    {restaurantInfo.phone}
                   </a>
                 </div>
               </div>
@@ -320,10 +320,10 @@ export default function ContactContent() {
                 <div>
                   <h4 className="font-semibold text-neutral-900 mb-1">Email</h4>
                   <a
-                    href={`mailto:${restaurantInfo.contact.email}`}
+                    href={`mailto:${restaurantInfo.email}`}
                     className="text-neutral-600 hover:text-primary-600 transition-colors"
                   >
-                    {restaurantInfo.contact.email}
+                    {restaurantInfo.email}
                   </a>
                 </div>
               </div>
@@ -390,7 +390,7 @@ export default function ContactContent() {
                         Caracas Bar & Tapas
                       </h4>
                       <p className="text-white/80 text-sm mb-4">
-                        {restaurantInfo.address.street}, {restaurantInfo.address.city}
+                        {restaurantInfo.street}, {restaurantInfo.city}
                       </p>
                       <div className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 rounded-full font-semibold shadow-lg group-hover:bg-white/90 transition-colors">
                         <span>Ouvrir dans Google Maps</span>

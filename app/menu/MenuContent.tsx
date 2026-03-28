@@ -5,7 +5,11 @@ import { useSearchParams } from 'next/navigation'
 import { Section, SectionHeader } from '@/components/Section'
 import { Button } from '@/components/Button'
 import { Badge, AllergenBadge } from '@/components/Badge'
-import { menuItems, menuCategories, menuItems as allMenuItems } from '@/data/restaurant'
+import { menu } from '@/data/clients/caracas/menu'
+
+const menuItems = menu.items
+const menuCategories = menu.categories
+const allMenuItems = menu.items
 import { ArrowLeft, Phone, Download } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Suspense } from 'react'
 import MenuContent from './MenuContent'
 
 export const metadata: Metadata = {
@@ -12,5 +13,9 @@ export const metadata: Metadata = {
 }
 
 export default function MenuPage() {
-  return <MenuContent />
+  return (
+    <Suspense fallback={<div>Chargement...</div>}>
+      <MenuContent />
+    </Suspense>
+  )
 }
