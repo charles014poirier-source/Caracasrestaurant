@@ -7,6 +7,8 @@ import { cn } from '@/lib/utils'
 import ButtonWithIconDemo from "@/components/ui/button-with-icon"
 import { Menu, X, MapPin } from 'lucide-react'
 import { SpotlightLink } from '@/components/SpotlightLink'
+import { caracasConfig } from '@/data/clients/caracas'
+import { contact } from '@/data/clients/caracas/contact'
 
 const navigation = [
   { name: 'Menu', href: '/menu' },
@@ -99,7 +101,7 @@ export function Header() {
               <div className="hidden lg:block flex-shrink-0">
                 <Link href="/" className="flex-shrink-0">
                   <span className="font-serif text-2xl font-bold text-neutral-900 tracking-tight">
-                    Caracas<span className="text-secondary-500">.</span>
+                    {caracasConfig.config.name.split(' ')[0]}<span className="text-secondary-500">.</span>
                   </span>
                 </Link>
               </div>
@@ -109,7 +111,7 @@ export function Header() {
             <div className="lg:hidden absolute left-1/2 -translate-x-1/2">
               <Link href="/" className="flex-shrink-0">
                 <span className="font-serif text-xl font-bold text-neutral-900 tracking-tight">
-                  Caracas<span className="text-secondary-500">.</span>
+                  {caracasConfig.config.name.split(' ')[0]}<span className="text-secondary-500">.</span>
                 </span>
               </Link>
             </div>
@@ -132,7 +134,7 @@ export function Header() {
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
-                    href={social.href}
+                    href={contact.social[social.name.toLowerCase() as keyof typeof contact.social]}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 rounded-full flex items-center justify-center text-neutral-600 hover:text-secondary-600 hover:bg-background-100 transition-all duration-200"
@@ -171,7 +173,7 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="font-serif text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight"
               >
-                Caracas<span className="text-secondary-500">.</span>
+                {caracasConfig.config.name.split(' ')[0]}<span className="text-secondary-500">.</span>
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -216,7 +218,7 @@ export function Header() {
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
-                    href={social.href}
+                    href={contact.social[social.name.toLowerCase() as keyof typeof contact.social]}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-white text-neutral-600 hover:text-secondary-600 hover:bg-secondary-50 transition-all duration-200 border border-neutral-200 shadow-sm"
