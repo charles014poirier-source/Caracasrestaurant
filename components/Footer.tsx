@@ -5,6 +5,6 @@ export function Footer() {
   return <Footer7
     contactInfo={caracasConfig.contact}
     config={caracasConfig.config}
-    hours={caracasConfig.hours}
+    hours={caracasConfig.contact.hours}
   />;
 }

@@ -8,6 +8,7 @@ export interface ClientConfig {
   config: BrandingConfig
   images: ImageConfig
   contact: ContactData
+  hours?: Record<string, string | null>
 }
 
 // Contenu éditorial
@@ -149,6 +150,9 @@ export interface SeoData {
   }
   description: string
   keywords: string[]
+  authors?: Array<{ name: string }>
+  creator?: string
+  publisher?: string
   openGraph: {
     type: string
     locale: string

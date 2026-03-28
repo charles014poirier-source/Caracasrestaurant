@@ -122,7 +122,7 @@ export const Footer7 = ({
               {contactInfo?.address && (
                 <div className="flex items-start gap-3 text-white/80">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5 text-secondary-300" />
-                  <span className="text-sm">{contactInfo.address}</span>
+                  <span className="text-sm">{contactInfo.address.full}</span>
                 </div>
               )}
               {contactInfo?.phone && (

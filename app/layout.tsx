@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   description: caracasConfig.seo.description,
   keywords: caracasConfig.seo.keywords,
-  authors: caracasConfig.seo.authors,
+  authors: caracasConfig.seo.authors || [],
   creator: caracasConfig.seo.creator,
   publisher: caracasConfig.seo.publisher,
   formatDetection: {
