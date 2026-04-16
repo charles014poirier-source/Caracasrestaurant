@@ -96,9 +96,9 @@ export function Header() {
               </button>
 
               {/* Desktop Logo */}
-              <div className="hidden lg:block flex-shrink-0">
-                <Link href="/" className="flex-shrink-0">
-                  <span className="font-serif text-2xl font-bold text-neutral-900 tracking-tight">
+              <div className="hidden lg:block flex-shrink-0 relative z-50">
+                <Link href="/" className="flex-shrink-0 block">
+                  <span className="font-serif text-2xl font-bold text-neutral-900 tracking-tight hover:text-secondary-600 transition-colors cursor-pointer">
                     Caracas<span className="text-secondary-500">.</span>
                   </span>
                 </Link>
@@ -106,9 +106,9 @@ export function Header() {
             </div>
 
             {/* Mobile: Centered Logo */}
-            <div className="lg:hidden absolute left-1/2 -translate-x-1/2">
-              <Link href="/" className="flex-shrink-0">
-                <span className="font-serif text-xl font-bold text-neutral-900 tracking-tight">
+            <div className="lg:hidden absolute left-1/2 -translate-x-1/2 z-50">
+              <Link href="/" className="flex-shrink-0 block">
+                <span className="font-serif text-xl font-bold text-neutral-900 tracking-tight hover:text-secondary-600 transition-colors cursor-pointer">
                   Caracas<span className="text-secondary-500">.</span>
                 </span>
               </Link>
