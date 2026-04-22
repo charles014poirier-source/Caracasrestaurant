@@ -2,6 +2,7 @@
 import { Section } from '@/components/Section'
 import { StoryContent, GlossaryItem } from '@/data/types/client'
 import { ScrollReveal } from '@/components/ScrollReveal'
+import { VenezuelanPattern } from '@/components/ui/VenezuelanPattern'
 
 interface StorySectionProps {
   content: StoryContent
@@ -16,6 +17,7 @@ export function StorySection({ content, glossary, config }: StorySectionProps) {
 
   return (
     <Section id="histoire" background="pattern">
+      <VenezuelanPattern opacity={0.08} />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <ScrollReveal direction="left">
           <div>
