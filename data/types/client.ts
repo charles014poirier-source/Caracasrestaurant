@@ -264,4 +264,5 @@ export interface ReviewItem {
   date: string
   rating: number
   text: string
+  avatar?: string // URL de la photo de profil (Unsplash)
 }
