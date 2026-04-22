@@ -4,6 +4,7 @@ import { contact } from '@/data/clients/caracas/contact'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { SignaturesSection } from '@/components/sections/SignaturesSection'
 import { StorySection } from '@/components/sections/StorySection'
+import { VideoStorySection } from '@/components/sections/VideoStorySection'
 import { ExperienceSection } from '@/components/sections/ExperienceSection'
 import { GallerySection } from '@/components/sections/GallerySection'
 import { EventsSection } from '@/components/sections/EventsSection'
@@ -50,6 +51,10 @@ export default function HomePage() {
         content={caracasConfig.content.story}
         glossary={caracasConfig.content.glossary}
         config={caracasConfig.config.sections.story}
+      />
+      <VideoStorySection
+        content={caracasConfig.content.videoStory}
+        config={caracasConfig.config.sections.videoStory}
       />
       <ExperienceSection
         experiences={caracasConfig.content.experiences}
