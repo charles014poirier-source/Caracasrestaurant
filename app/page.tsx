@@ -32,38 +32,6 @@ const events: EventItem[] = [
   },
 ]
 
-// Données d'avis (à migrer dans data/clients/caracas/content.ts plus tard)
-const reviews: ReviewItem[] = [
-  {
-    id: 1,
-    name: 'Marie L.',
-    date: 'Il y a 2 semaines',
-    rating: 5,
-    text: 'Les arepas sont incroyables ! On s\'y croirait vraiment au Venezuela. L\'ambiance est super conviviale et le personnel adorable.',
-  },
-  {
-    id: 2,
-    name: 'Thomas R.',
-    date: 'Il y a 1 mois',
-    rating: 5,
-    text: 'Découverte gustative extraordinaire ! Le Pabellón est un must. Les cocktails sont parfaitement dosés. Je recommande à 100%.',
-  },
-  {
-    id: 3,
-    name: 'Sophie M.',
-    date: 'Il y a 3 semaines',
-    rating: 4,
-    text: 'Très belle découverte. Les empanadas sont délicieuses et le service attentionné. On y retourne !',
-  },
-  {
-    id: 4,
-    name: 'Carlos D.',
-    date: 'Il y a 2 mois',
-    rating: 5,
-    text: 'Enfin de vraies saveurs vénézuéliennes à Paris ! La cachapa m\'a rappelé mes souvenirs d\'enfance. Merci pour ce moment.',
-  },
-]
-
 export default function HomePage() {
   const todayHours = Object.values(contact.hours)[new Date().getDay()] || 'Fermé'
 
@@ -96,7 +64,7 @@ export default function HomePage() {
         config={caracasConfig.config.sections.events}
       />
       <ReviewsSection
-        reviews={reviews}
+        reviews={caracasConfig.content.reviews}
         rating="4.8"
         reviewCount="120"
         googleMapsUrl={contact.googleMapsUrl}
