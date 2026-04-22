@@ -60,9 +60,17 @@ export function ReviewsSection({ reviews, rating, reviewCount, googleMapsUrl, co
               </p>
               <div className="pt-5 border-t border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary-400 to-secondary-600 flex items-center justify-center text-white font-semibold text-lg">
-                    {review.name.charAt(0)}
-                  </div>
+                  {review.avatar ? (
+                    <img
+                      src={review.avatar}
+                      alt={`Photo de ${review.name}`}
+                      className="w-12 h-12 rounded-full object-cover border-2 border-secondary-200"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary-400 to-secondary-600 flex items-center justify-center text-white font-semibold text-lg">
+                      {review.name.charAt(0)}
+                    </div>
+                  )}
                   <div>
                     <p className="text-neutral-900 font-semibold text-body">{review.name}</p>
                     <p className="text-neutral-500 text-body-sm">{review.date}</p>
