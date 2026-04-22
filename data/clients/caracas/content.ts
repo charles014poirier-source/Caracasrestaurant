@@ -98,9 +98,22 @@ export const reviews: ReviewItem[] = [
     },
   ]
 
+export const videoStory = {
+  enabled: true,
+  videoUrl: 'https://videos.pexels.com/video-files/520876/520876-uhd_2560_1440_30fps.mp4',
+  posterUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80',
+  title: "L'Art de Vivre Vénézuélien",
+  subtitle: 'Découvrez nos saveurs et nos traditions',
+  cta: {
+    text: 'Voir notre carte',
+    href: '#menu'
+  }
+}
+
 export const content: ContentData = {
   hero,
   story,
+  videoStory, // NOUVEAU
   experiences,
   glossary,
   reviews, // NOUVEAU
