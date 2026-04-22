@@ -15,6 +15,7 @@ export interface ClientConfig {
 export interface ContentData {
   hero: HeroContent
   story: StoryContent
+  videoStory: VideoStoryContent // NOUVEAU
   experiences: ExperienceItem[]
   glossary: GlossaryItem[]
   reviews: ReviewItem[] // NOUVEAU
@@ -38,6 +39,18 @@ export interface StoryContent {
   paragraphs: string[]
   image: string
   establishmentYear?: number
+}
+
+export interface VideoStoryContent {
+  enabled: boolean
+  videoUrl: string
+  posterUrl: string
+  title: string
+  subtitle: string
+  cta: {
+    text: string
+    href: string
+  }
 }
 
 export interface ExperienceItem {
