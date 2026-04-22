@@ -3,6 +3,7 @@ import { HeroContent, BrandingConfig } from '@/data/types/client'
 import { Button } from '@/components/Button'
 import { Star, Clock, MapPin, ArrowRight, Utensils } from 'lucide-react'
 import Link from 'next/link'
+import { VenezuelanPattern } from '@/components/ui/VenezuelanPattern'
 
 interface HeroSectionProps {
   content: HeroContent
@@ -15,6 +16,8 @@ export function HeroSection({ content, config, todayHours }: HeroSectionProps) {
 
   return (
     <section className="relative min-h-[90vh] flex items-center bg-neutral-900">
+      <VenezuelanPattern opacity={0.05} />
+
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
