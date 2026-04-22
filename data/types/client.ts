@@ -92,6 +92,7 @@ export interface SectionConfig {
   hero: { enabled: boolean }
   signatures: { enabled: boolean }
   story: { enabled: boolean }
+  videoStory: { enabled: boolean } // NOUVEAU
   experiences: { enabled: boolean }
   gallery: { enabled: boolean }
   events: { enabled: boolean }
