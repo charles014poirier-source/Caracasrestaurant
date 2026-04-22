@@ -17,6 +17,7 @@ export interface ContentData {
   story: StoryContent
   experiences: ExperienceItem[]
   glossary: GlossaryItem[]
+  reviews: ReviewItem[] // NOUVEAU
 }
 
 export interface HeroContent {
