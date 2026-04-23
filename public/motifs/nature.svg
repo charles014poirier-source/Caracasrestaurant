@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <pattern id="tepuysPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <!-- Tepuy silhouette (table-top mountain) -->
+      <path d="M20 80 L40 30 L60 30 L80 80" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+      <!-- Waterfall/cascade -->
+      <path d="M50 30 L50 55" stroke="currentColor" stroke-width="0.5" opacity="0.4" stroke-dasharray="2,2"/>
+      <!-- Organic shapes -->
+      <path d="M10 90 Q30 70 50 90 T90 90" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#tepuysPattern)"/>
+</svg>
