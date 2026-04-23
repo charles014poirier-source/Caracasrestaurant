@@ -2,9 +2,9 @@
 import { caracasConfig } from '@/data/clients/caracas'
 import { contact } from '@/data/clients/caracas/contact'
 import { HeroSection } from '@/components/sections/HeroSection'
+import { VenezuelanFlagBackground } from '@/components/ui/VenezuelanFlagBackground'
 import { SignaturesSection } from '@/components/sections/SignaturesSection'
 import { StorySection } from '@/components/sections/StorySection'
-import { VideoStorySection } from '@/components/sections/VideoStorySection'
 import { ExperienceSection } from '@/components/sections/ExperienceSection'
 import { GallerySection } from '@/components/sections/GallerySection'
 import { EventsSection } from '@/components/sections/EventsSection'
@@ -38,11 +38,13 @@ export default function HomePage() {
 
   return (
     <>
-      <HeroSection
-        content={caracasConfig.content.hero}
-        config={caracasConfig.config}
-        todayHours={todayHours}
-      />
+      <VenezuelanFlagBackground color="yellow" motif="food" opacity={0.1}>
+        <HeroSection
+          content={caracasConfig.content.hero}
+          config={caracasConfig.config}
+          todayHours={todayHours}
+        />
+      </VenezuelanFlagBackground>
       <SignaturesSection
         items={caracasConfig.menu.signatureDishes}
         config={caracasConfig.config.sections.signatures}
@@ -51,10 +53,6 @@ export default function HomePage() {
         content={caracasConfig.content.story}
         glossary={caracasConfig.content.glossary}
         config={caracasConfig.config.sections.story}
-      />
-      <VideoStorySection
-        content={caracasConfig.content.videoStory}
-        config={caracasConfig.config.sections.videoStory}
       />
       <ExperienceSection
         experiences={caracasConfig.content.experiences}
