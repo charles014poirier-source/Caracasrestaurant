@@ -45,10 +45,12 @@ export default function HomePage() {
           todayHours={todayHours}
         />
       </VenezuelanFlagBackground>
-      <SignaturesSection
-        items={caracasConfig.menu.signatureDishes}
-        config={caracasConfig.config.sections.signatures}
-      />
+      <VenezuelanFlagBackground color="blue" motif="food" opacity={0.12}>
+        <SignaturesSection
+          items={caracasConfig.menu.signatureDishes}
+          config={caracasConfig.config.sections.signatures}
+        />
+      </VenezuelanFlagBackground>
       <StorySection
         content={caracasConfig.content.story}
         glossary={caracasConfig.content.glossary}
