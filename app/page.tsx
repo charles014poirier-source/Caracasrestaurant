@@ -64,10 +64,12 @@ export default function HomePage() {
           config={caracasConfig.config.sections.experiences}
         />
       </VenezuelanFlagBackground>
-      <GallerySection
-        images={caracasConfig.images.gallery}
-        config={caracasConfig.config.sections.gallery}
-      />
+      <VenezuelanFlagBackground color="red" motif="nature" opacity={0.08}>
+        <GallerySection
+          images={caracasConfig.images.gallery}
+          config={caracasConfig.config.sections.gallery}
+        />
+      </VenezuelanFlagBackground>
       <EventsSection
         events={events}
         config={caracasConfig.config.sections.events}
