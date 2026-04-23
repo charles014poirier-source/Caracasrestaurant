@@ -58,10 +58,12 @@ export default function HomePage() {
           config={caracasConfig.config.sections.story}
         />
       </VenezuelanFlagBackground>
-      <ExperienceSection
-        experiences={caracasConfig.content.experiences}
-        config={caracasConfig.config.sections.experiences}
-      />
+      <VenezuelanFlagBackground color="red" motif="nature" opacity={0.1}>
+        <ExperienceSection
+          experiences={caracasConfig.content.experiences}
+          config={caracasConfig.config.sections.experiences}
+        />
+      </VenezuelanFlagBackground>
       <GallerySection
         images={caracasConfig.images.gallery}
         config={caracasConfig.config.sections.gallery}
