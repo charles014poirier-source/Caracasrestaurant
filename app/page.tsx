@@ -70,10 +70,12 @@ export default function HomePage() {
           config={caracasConfig.config.sections.gallery}
         />
       </VenezuelanFlagBackground>
-      <EventsSection
-        events={events}
-        config={caracasConfig.config.sections.events}
-      />
+      <VenezuelanFlagBackground color="red" motif="festive" opacity={0.06}>
+        <EventsSection
+          events={events}
+          config={caracasConfig.config.sections.events}
+        />
+      </VenezuelanFlagBackground>
       <ReviewsSection
         reviews={caracasConfig.content.reviews}
         rating="4.8"
