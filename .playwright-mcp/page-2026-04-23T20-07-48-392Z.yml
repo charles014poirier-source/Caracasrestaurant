@@ -1,0 +1,445 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Caracas." [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: Caracas.
+      - navigation [ref=e9]:
+        - link "Menu" [ref=e10] [cursor=pointer]:
+          - /url: /menu
+          - text: Menu
+        - link "Histoire" [ref=e11] [cursor=pointer]:
+          - /url: /#histoire
+          - text: Histoire
+        - link "Galerie" [ref=e12] [cursor=pointer]:
+          - /url: /#galerie
+          - text: Galerie
+        - link "Privatisation" [ref=e13] [cursor=pointer]:
+          - /url: /#privatisation
+          - text: Privatisation
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - link "Instagram" [ref=e16] [cursor=pointer]:
+            - /url: https://www.instagram.com/holacaracas.paris/
+            - img [ref=e17]
+          - link "Facebook" [ref=e19] [cursor=pointer]:
+            - /url: https://www.facebook.com/caracas.bar.tapas
+            - img [ref=e20]
+          - link "LinkedIn" [ref=e22] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/caracas-paris/
+            - img [ref=e23]
+        - link "Réserver" [ref=e25] [cursor=pointer]:
+          - /url: /contact#reservation
+          - generic [ref=e26]: Réserver
+          - img [ref=e28]
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - generic:
+        - img
+      - img "Ambiance du restaurant Caracas Bar & Tapas" [ref=e34]
+      - generic [ref=e37]:
+        - paragraph [ref=e38]: Levallois-Perret
+        - heading "Cuisine vénézuélienne & tapas festives à Levallois" [level=1] [ref=e39]
+        - paragraph [ref=e40]: Inspiré de Caracas, revisité à Paris. Un voyage culinaire entre arepas, cachapas et cocktails créoles.
+        - generic [ref=e41]:
+          - link "La carte Arepas • Tapas • Cocktails" [ref=e42] [cursor=pointer]:
+            - /url: /menu
+            - generic [ref=e47]:
+              - generic [ref=e48]:
+                - img [ref=e49]
+                - generic [ref=e52]:
+                  - generic [ref=e53]: La carte
+                  - generic [ref=e54]: Arepas • Tapas • Cocktails
+              - img [ref=e55]
+          - link "Click & Collect" [ref=e58] [cursor=pointer]:
+            - /url: https://deliveroo.fr/fr/menu/paris/levallois-perret/caracas-levallois-31-rue-henri-barbusse
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - img [ref=e61]
+            - generic [ref=e64]: "Aujourd'hui : 19h00 - 00h00"
+          - generic [ref=e65]:
+            - img [ref=e66]
+            - generic [ref=e69]: Levallois-Perret
+          - generic [ref=e70]:
+            - img [ref=e71]
+            - generic [ref=e73]: 4.8/5
+            - generic [ref=e74]: • 120+ avis
+      - img [ref=e76]
+    - generic [ref=e79]:
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: Les incontournables
+        - heading "Nos Signatures" [level=2] [ref=e83]
+        - paragraph [ref=e84]: Les plats qui ont fait notre réputation. Une invitation au voyage gustatif.
+      - generic [ref=e85]:
+        - 'link "Reina Pepiada ⭐ Best-seller 13.50€ Reina Pepiada L''incontournable : arepas au maïs, poulet rôti et avocat Voir la carte" [ref=e87] [cursor=pointer]':
+          - /url: /menu?category=arepas
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - img "Reina Pepiada" [ref=e90]
+              - generic [ref=e93]: ⭐ Best-seller
+              - generic [ref=e95]: 13.50€
+              - img [ref=e98]
+            - generic [ref=e100]:
+              - heading "Reina Pepiada" [level=3] [ref=e101]
+              - paragraph [ref=e102]: "L'incontournable : arepas au maïs, poulet rôti et avocat"
+              - generic [ref=e103]:
+                - generic [ref=e104]: Voir la carte
+                - img [ref=e105]
+        - link "Empanadas ⭐ Best-seller 11.00€ Empanadas Chaussons frits croustillants, fromage fondant ou bœuf Voir la carte" [ref=e108] [cursor=pointer]:
+          - /url: /menu?category=tapas
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - img "Empanadas" [ref=e111]
+              - generic [ref=e114]: ⭐ Best-seller
+              - generic [ref=e116]: 11.00€
+              - img [ref=e119]
+            - generic [ref=e121]:
+              - heading "Empanadas" [level=3] [ref=e122]
+              - paragraph [ref=e123]: Chaussons frits croustillants, fromage fondant ou bœuf
+              - generic [ref=e124]:
+                - generic [ref=e125]: Voir la carte
+                - img [ref=e126]
+        - 'link "Pabellón Criollo ⭐ Best-seller 21.00€ Pabellón Criollo Le plat national : bœuf mijoté, haricots noirs, riz et plantain Voir la carte" [ref=e129] [cursor=pointer]':
+          - /url: /menu?category=plats
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - img "Pabellón Criollo" [ref=e132]
+              - generic [ref=e135]: ⭐ Best-seller
+              - generic [ref=e137]: 21.00€
+              - img [ref=e140]
+            - generic [ref=e142]:
+              - heading "Pabellón Criollo" [level=3] [ref=e143]
+              - paragraph [ref=e144]: "Le plat national : bœuf mijoté, haricots noirs, riz et plantain"
+              - generic [ref=e145]:
+                - generic [ref=e146]: Voir la carte
+                - img [ref=e147]
+        - link "Cachapa Classique ⭐ Best-seller 12.50€ Cachapa Classique Crêpe de maïs doux au fromage fondu, irrésistible Voir la carte" [ref=e150] [cursor=pointer]:
+          - /url: /menu?category=cachapas
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - img "Cachapa Classique" [ref=e153]
+              - generic [ref=e156]: ⭐ Best-seller
+              - generic [ref=e158]: 12.50€
+              - img [ref=e161]
+            - generic [ref=e163]:
+              - heading "Cachapa Classique" [level=3] [ref=e164]
+              - paragraph [ref=e165]: Crêpe de maïs doux au fromage fondu, irrésistible
+              - generic [ref=e166]:
+                - generic [ref=e167]: Voir la carte
+                - img [ref=e168]
+        - 'link "Mojito Caracas ⭐ Best-seller 11.00€ Mojito Caracas Le cocktail signature : rhum, menthe, citron vert Voir la carte" [ref=e171] [cursor=pointer]':
+          - /url: /menu?category=cocktails
+          - generic [ref=e172]:
+            - generic [ref=e173]:
+              - img "Mojito Caracas" [ref=e174]
+              - generic [ref=e177]: ⭐ Best-seller
+              - generic [ref=e179]: 11.00€
+              - img [ref=e182]
+            - generic [ref=e184]:
+              - heading "Mojito Caracas" [level=3] [ref=e185]
+              - paragraph [ref=e186]: "Le cocktail signature : rhum, menthe, citron vert"
+              - generic [ref=e187]:
+                - generic [ref=e188]: Voir la carte
+                - img [ref=e189]
+        - link "Quesillo ⭐ Best-seller 7.50€ Quesillo Flan vénézuélien au caramel, onctueux et réconfortant Voir la carte" [ref=e192] [cursor=pointer]:
+          - /url: /menu?category=desserts
+          - generic [ref=e193]:
+            - generic [ref=e194]:
+              - img "Quesillo" [ref=e195]
+              - generic [ref=e198]: ⭐ Best-seller
+              - generic [ref=e200]: 7.50€
+              - img [ref=e203]
+            - generic [ref=e205]:
+              - heading "Quesillo" [level=3] [ref=e206]
+              - paragraph [ref=e207]: Flan vénézuélien au caramel, onctueux et réconfortant
+              - generic [ref=e208]:
+                - generic [ref=e209]: Voir la carte
+                - img [ref=e210]
+      - link "Découvrir toute la carte" [ref=e214] [cursor=pointer]:
+        - /url: /menu
+        - generic [ref=e215]: Découvrir toute la carte
+        - img [ref=e216]
+    - generic [ref=e220]:
+      - generic:
+        - img
+      - generic [ref=e221]:
+        - generic [ref=e223]:
+          - paragraph [ref=e224]: Notre Histoire
+          - heading "De Caracas à Levallois" [level=2] [ref=e225]
+          - generic [ref=e226]:
+            - paragraph [ref=e227]: Caracas Bar & Tapas est né de l'amitié d'Igor et Difrines, deux passionnés souhaitant partager la richesse de la cuisine vénézuélienne avec les Parisiens.
+            - paragraph [ref=e228]: "Notre mission : vous faire voyager à travers les saveurs authentiques du Venezuela, depuis les arepas du petit-déjeuner jusqu'aux cocktails du soir."
+            - paragraph [ref=e229]: Aujourd'hui installés à Levallois, nous perpétuons cette tradition d'accueil et de partage, où chaque plat raconte une histoire.
+          - generic [ref=e230]:
+            - heading "Petit lexique vénézuélien" [level=4] [ref=e231]
+            - generic [ref=e232]:
+              - generic [ref=e234]: Arepas•Galettes de maïs, grillées ou frites, fourrées selon les envies. La base de la cuisine vénézuélienne.
+              - generic [ref=e236]: Cachapa•Crêpe épaisse à base de maïs doux, généralement servie avec du fromage fondu.
+              - generic [ref=e238]: "Pabellón Criollo•Le plat national : bœuf, haricots noirs, riz et plantain frit."
+              - generic [ref=e240]: Tequeños•Bâtonnets de pâte feuilletée fourrés au fromage, l'apéritif incontournable.
+        - generic [ref=e242]:
+          - img "Ambiance du restaurant" [ref=e243]
+          - generic [ref=e244]:
+            - paragraph [ref=e245]: "2015"
+            - paragraph [ref=e246]: Année de création
+    - generic [ref=e249]:
+      - generic [ref=e251]:
+        - generic [ref=e252]: 🍲
+        - heading "Cuisine Authentique" [level=3] [ref=e253]
+        - paragraph [ref=e254]: Des recettes transmises, des produits frais, des saveurs du Venezuela
+      - generic [ref=e256]:
+        - generic [ref=e257]: 🍹
+        - heading "Cocktails Créoles" [level=3] [ref=e258]
+        - paragraph [ref=e259]: Rhum, cachaca, pisco... des mélanges festifs et rafraîchissants
+      - generic [ref=e261]:
+        - generic [ref=e262]: 🎵
+        - heading "Ambiance Festive" [level=3] [ref=e263]
+        - paragraph [ref=e264]: Musique latine, décoration chaleureuse, esprit de partage
+    - generic [ref=e266]:
+      - generic [ref=e268]:
+        - paragraph [ref=e269]: Un lieu vivant
+        - heading "L'Ambiance" [level=2] [ref=e270]
+        - paragraph [ref=e271]: Découvrez l'atmosphère chaleureuse
+      - generic [ref=e272]:
+        - img "Ambiance du restaurant" [ref=e275]
+        - img "Cocktails colorés" [ref=e279]
+        - img "Plat typique" [ref=e283]
+        - img "Intérieur chaleureux" [ref=e287]
+        - img "Fête et musique" [ref=e291]
+        - img "Détail décoratif" [ref=e295]
+    - generic [ref=e298]:
+      - generic [ref=e300]:
+        - paragraph [ref=e301]: Vos moments, nos saveurs
+        - heading "Privatisation & Événements" [level=2] [ref=e302]
+        - paragraph [ref=e303]: Des expériences uniques pour vos moments spéciaux
+      - generic [ref=e304]:
+        - generic [ref=e306]:
+          - generic [ref=e307]:
+            - img "Afterwork & Tapas" [ref=e308]
+            - generic [ref=e311]: 🍹
+          - generic [ref=e312]:
+            - heading "Afterwork & Tapas" [level=3] [ref=e313]
+            - paragraph [ref=e314]: Chaque jeudi, formules tapas à partager entre collègues ou amis. Ambiance musicale garantie.
+            - generic [ref=e315]:
+              - link "Réserver un jeudi" [ref=e316] [cursor=pointer]:
+                - /url: /contact
+                - generic [ref=e317]: Réserver un jeudi
+                - img [ref=e318]
+              - paragraph [ref=e320]: Dès 19h • Jusqu'à 20 personnes
+        - generic [ref=e322]:
+          - generic [ref=e323]:
+            - img "Privatisation Étage" [ref=e324]
+            - generic [ref=e327]: 🎉
+          - generic [ref=e328]:
+            - heading "Privatisation Étage" [level=3] [ref=e329]
+            - paragraph [ref=e330]: Notre étage peut accueillir vos événements jusqu'à 40 personnes. Formules sur mesure.
+            - generic [ref=e331]:
+              - link "Demander un devis" [ref=e332] [cursor=pointer]:
+                - /url: /contact
+                - generic [ref=e333]: Demander un devis
+                - img [ref=e334]
+              - paragraph [ref=e336]: Étage privé • Jusqu'à 40 personnes
+        - generic [ref=e338]:
+          - generic [ref=e339]:
+            - img "Traiteur & Cocktails" [ref=e340]
+            - generic [ref=e343]: 🍽️
+          - generic [ref=e344]:
+            - heading "Traiteur & Cocktails" [level=3] [ref=e345]
+            - paragraph [ref=e346]: Nous apportons nos saveurs chez vous pour vos événements privés ou professionnels.
+            - generic [ref=e347]:
+              - link "Nous contacter" [ref=e348] [cursor=pointer]:
+                - /url: /contact
+                - generic [ref=e349]: Nous contacter
+                - img [ref=e350]
+              - paragraph [ref=e352]: Chez vous • Formules sur mesure
+      - generic [ref=e354]:
+        - img "Événement au restaurant" [ref=e356]
+        - generic [ref=e358]:
+          - heading "Un projet d'événement ?" [level=3] [ref=e359]
+          - paragraph [ref=e360]: Nous créons des expériences sur mesure pour vos moments spéciaux. Contactez-nous pour en discuter.
+          - link "Demander un devis gratuit" [ref=e362] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=e363]: Demander un devis gratuit
+            - img [ref=e364]
+    - generic [ref=e366]:
+      - generic [ref=e368]:
+        - paragraph [ref=e369]: Avis Clients
+        - heading "Ce qu'ils disent de nous" [level=2] [ref=e370]
+        - generic [ref=e371]:
+          - generic [ref=e372]:
+            - img [ref=e373]
+            - img [ref=e375]
+            - img [ref=e377]
+            - img [ref=e379]
+            - img [ref=e381]
+          - generic [ref=e383]: "4.8"
+          - generic [ref=e384]: sur 5
+        - paragraph [ref=e385]: Plus de 120 avis vérifiés sur Google et Deliveroo
+      - generic [ref=e386]:
+        - generic [ref=e387]:
+          - generic [ref=e388]:
+            - generic [ref=e389]:
+              - img [ref=e390]
+              - img [ref=e392]
+              - img [ref=e394]
+              - img [ref=e396]
+              - img [ref=e398]
+            - paragraph [ref=e400]: "\"Les arepas sont incroyables ! On s'y croirait vraiment au Venezuela. L'ambiance est super conviviale et le personnel adorable.\""
+            - generic [ref=e402]:
+              - img "Photo de Marie L." [ref=e403]
+              - generic [ref=e404]:
+                - paragraph [ref=e405]: Marie L.
+                - paragraph [ref=e406]: Il y a 2 semaines
+          - generic [ref=e407]:
+            - generic [ref=e408]:
+              - img [ref=e409]
+              - img [ref=e411]
+              - img [ref=e413]
+              - img [ref=e415]
+              - img [ref=e417]
+            - paragraph [ref=e419]: "\"Découverte gustative extraordinaire ! Le Pabellón est un must. Les cocktails sont parfaitement dosés. Je recommande à 100%.\""
+            - generic [ref=e421]:
+              - img "Photo de Thomas R." [ref=e422]
+              - generic [ref=e423]:
+                - paragraph [ref=e424]: Thomas R.
+                - paragraph [ref=e425]: Il y a 1 mois
+          - generic [ref=e426]:
+            - generic [ref=e427]:
+              - img [ref=e428]
+              - img [ref=e430]
+              - img [ref=e432]
+              - img [ref=e434]
+              - img [ref=e436]
+            - paragraph [ref=e438]: "\"Très belle découverte. Les empanadas sont délicieuses et le service attentionné. On y retourne !\""
+            - generic [ref=e440]:
+              - img "Photo de Sophie M." [ref=e441]
+              - generic [ref=e442]:
+                - paragraph [ref=e443]: Sophie M.
+                - paragraph [ref=e444]: Il y a 3 semaines
+        - generic [ref=e447]:
+          - generic [ref=e448]:
+            - generic [ref=e449]:
+              - generic [ref=e450]: M
+              - generic [ref=e451]: S
+              - generic [ref=e452]: P
+            - generic [ref=e453]:
+              - generic [ref=e454]:
+                - img "Google logo" [ref=e455]
+                - generic [ref=e460]: Google
+                - generic [ref=e461]:
+                  - img [ref=e462]
+                  - img [ref=e464]
+                  - img [ref=e466]
+                  - img [ref=e468]
+                  - img [ref=e470]
+              - paragraph [ref=e472]: Laissez votre avis sur Google
+          - link "Lire tous les avis" [ref=e473] [cursor=pointer]:
+            - /url: https://maps.app.goo.gl/CsKc6rc471n63fV86
+            - generic [ref=e474]: Lire tous les avis
+            - img [ref=e475]
+  - contentinfo [ref=e477]:
+    - generic [ref=e478]:
+      - generic [ref=e479]:
+        - generic [ref=e480]:
+          - link "Caracas." [ref=e481] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e482]: Caracas.
+          - paragraph [ref=e483]: Inspiré de Caracas, revisité à Paris. Un voyage culinaire entre arepas, cachapas et cocktails créoles.
+          - generic [ref=e484]:
+            - generic [ref=e485]:
+              - img [ref=e486]
+              - generic [ref=e489]: 123 Rue de Paris, 92300 Levallois-Perret
+            - generic [ref=e490]:
+              - img [ref=e491]
+              - link "01 23 45 67 89" [ref=e493] [cursor=pointer]:
+                - /url: tel:0123456789
+            - generic [ref=e494]:
+              - img [ref=e495]
+              - link "contact@caracas-bar-tapas.fr" [ref=e498] [cursor=pointer]:
+                - /url: mailto:contact@caracas-bar-tapas.fr
+          - list [ref=e499]:
+            - listitem [ref=e500]:
+              - link "Instagram" [ref=e501] [cursor=pointer]:
+                - /url: https://www.instagram.com/holacaracas.paris/
+                - img [ref=e502]
+            - listitem [ref=e505]:
+              - link "Facebook" [ref=e506] [cursor=pointer]:
+                - /url: https://www.facebook.com/caracas.bar.tapas
+                - img [ref=e507]
+            - listitem [ref=e509]:
+              - link "LinkedIn" [ref=e510] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/caracas-paris/
+                - img [ref=e511]
+        - generic [ref=e516]:
+          - generic [ref=e517]:
+            - heading "Navigation" [level=3] [ref=e518]
+            - list [ref=e519]:
+              - listitem [ref=e520]:
+                - link "Menu" [ref=e521] [cursor=pointer]:
+                  - /url: /menu
+              - listitem [ref=e522]:
+                - link "Notre histoire" [ref=e523] [cursor=pointer]:
+                  - /url: /#histoire
+              - listitem [ref=e524]:
+                - link "Galerie" [ref=e525] [cursor=pointer]:
+                  - /url: /#galerie
+              - listitem [ref=e526]:
+                - link "Privatisation" [ref=e527] [cursor=pointer]:
+                  - /url: /#privatisation
+          - generic [ref=e528]:
+            - heading "Liens utiles" [level=3] [ref=e529]
+            - list [ref=e530]:
+              - listitem [ref=e531]:
+                - link "Mentions légales" [ref=e532] [cursor=pointer]:
+                  - /url: /mentions-legales
+              - listitem [ref=e533]:
+                - link "Confidentialité" [ref=e534] [cursor=pointer]:
+                  - /url: /confidentialite
+        - generic [ref=e535]:
+          - heading "Horaires d'ouverture" [level=3] [ref=e536]:
+            - img [ref=e537]
+            - text: Horaires d'ouverture
+          - generic [ref=e540]:
+            - generic [ref=e541]:
+              - generic [ref=e542]: lundi
+              - generic [ref=e543]: 19h00 - 23h00
+            - generic [ref=e544]:
+              - generic [ref=e545]: mardi
+              - generic [ref=e546]: Fermé
+            - generic [ref=e547]:
+              - generic [ref=e548]: mercredi
+              - generic [ref=e549]: 19h00 - 23h00
+            - generic [ref=e550]:
+              - generic [ref=e551]: jeudi
+              - generic [ref=e552]: 19h00 - 00h00
+            - generic [ref=e553]:
+              - generic [ref=e554]: vendredi
+              - generic [ref=e555]: 19h00 - 00h00
+            - generic [ref=e556]:
+              - generic [ref=e557]: samedi
+              - generic [ref=e558]: 18h00 - 00h00
+            - generic [ref=e559]:
+              - generic [ref=e560]: dimanche
+              - generic [ref=e561]: Fermé
+      - generic [ref=e564]:
+        - generic [ref=e565]:
+          - img [ref=e568]
+          - generic [ref=e570]:
+            - heading "Réservez votre table" [level=4] [ref=e571]
+            - paragraph [ref=e572]: Places limitées • Week-end chargé
+        - link "Réserver" [ref=e573] [cursor=pointer]:
+          - /url: /contact#reservation
+          - img [ref=e574]
+          - generic [ref=e576]: Réserver
+          - img [ref=e577]
+      - generic [ref=e580]:
+        - paragraph [ref=e581]: © 2025 Caracas Bar & Tapas. Tous droits réservés.
+        - list [ref=e582]:
+          - listitem [ref=e583]:
+            - link "Mentions légales" [ref=e584] [cursor=pointer]:
+              - /url: /mentions-legales
+          - listitem [ref=e585]:
+            - link "Politique de confidentialité" [ref=e586] [cursor=pointer]:
+              - /url: /confidentialite
+  - button "Open Next.js Dev Tools" [ref=e592] [cursor=pointer]:
+    - img [ref=e593]

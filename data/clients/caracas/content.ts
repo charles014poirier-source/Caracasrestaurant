@@ -100,8 +100,8 @@ export const reviews: ReviewItem[] = [
 
 export const videoStory = {
   enabled: true,
-  videoUrl: 'https://videos.pexels.com/video-files/520876/520876-uhd_2560_1440_30fps.mp4',
-  posterUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80',
+  videoUrl: 'https://player.vimeo.com/external/493297433.sd.mp4?s=d0b8aca3c3cf5c1c0a9e8c5e8c5b8c5e8c5b8c5e&profile_id=165&oauth2_token_id=57447761',
+  posterUrl: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80',
   title: "L'Art de Vivre Vénézuélien",
   subtitle: 'Découvrez nos saveurs et nos traditions',
   cta: {

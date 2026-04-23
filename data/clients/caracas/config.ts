@@ -23,7 +23,6 @@ export const config: BrandingConfig = {
     hero: { enabled: true },
     signatures: { enabled: true },
     story: { enabled: true },
-    videoStory: { enabled: true }, // NOUVEAU
     experiences: { enabled: true },
     gallery: { enabled: true },
     events: { enabled: true },
