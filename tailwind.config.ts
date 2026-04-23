@@ -122,6 +122,9 @@ const config: Config = {
         'bounce-slow': 'bounceSlow 2s infinite',
         'arrow-slide': 'arrowSlide 1.5s ease-in-out infinite',
         'gradient-shift': 'gradientShift 3s ease infinite',
+        'slow-pan': 'slowPan 30s linear infinite',
+        'slow-zoom': 'slowZoom 20s ease-in-out infinite alternate',
+        'pulse-slow': 'pulseSlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         fadeIn: {
@@ -163,6 +166,18 @@ const config: Config = {
         gradientShift: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+        },
+        slowPan: {
+          '0%': { backgroundPosition: '0% 0%' },
+          '100%': { backgroundPosition: '100px 100px' },
+        },
+        slowZoom: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.1)' },
+        },
+        pulseSlow: {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '0.6' },
         },
       },
       backgroundImage: {
