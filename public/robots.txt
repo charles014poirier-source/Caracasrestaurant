@@ -1,0 +1,20 @@
+# robots.txt pour Caracas Bar & Tapas
+
+User-agent: *
+Allow: /
+
+# Interdire l'accès aux fichiers de configuration
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Autoriser les fichiers CSS et JS
+Allow: /_next/static/
+Allow: /static/css/
+Allow: /static/js/
+
+# Sitemap
+Sitemap: https://caracas-bar-tapas.fr/sitemap.xml
+
+# Delay de crawl (optionnel)
+Crawl-delay: 1

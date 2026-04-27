@@ -8,6 +8,26 @@ import { GallerySection } from '@/components/sections/GallerySection'
 import { EventsSection } from '@/components/sections/EventsSection'
 import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { EventItem, ReviewItem } from '@/data/types/client'
+import { Metadata } from 'next'
+
+// Métadonnées spécifiques à la page d'accueil
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: caracasConfig.seo.title.default,
+    description: caracasConfig.seo.description,
+    keywords: caracasConfig.seo.keywords,
+    openGraph: {
+      ...caracasConfig.seo.openGraph,
+      url: 'https://caracas-bar-tapas.fr/',
+    },
+    twitter: {
+      ...caracasConfig.seo.twitter,
+    },
+    alternates: {
+      canonical: 'https://caracas-bar-tapas.fr/',
+    },
+  }
+}
 
 // Données d'événements (à migrer dans data/clients/caracas/content.ts plus tard)
 const events: EventItem[] = [

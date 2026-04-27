@@ -30,13 +30,29 @@ export const metadata: Metadata = {
   authors: caracasConfig.seo.authors || [],
   creator: caracasConfig.seo.creator,
   publisher: caracasConfig.seo.publisher,
+  generator: 'Next.js',
+  applicationName: caracasConfig.seo.siteName,
+  referrer: 'origin-when-cross-origin',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  openGraph: caracasConfig.seo.openGraph,
-  twitter: caracasConfig.seo.twitter,
+  alternates: {
+    canonical: '/',
+    languages: {
+      'fr-FR': '/fr',
+    },
+  },
+  openGraph: {
+    ...caracasConfig.seo.openGraph,
+    siteName: caracasConfig.seo.siteName,
+    locale: 'fr_FR',
+  },
+  twitter: {
+    ...caracasConfig.seo.twitter,
+    card: 'summary_large_image',
+  },
   robots: {
     index: true,
     follow: true,
@@ -50,6 +66,11 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
   },
 }
 
