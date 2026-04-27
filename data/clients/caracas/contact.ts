@@ -3,9 +3,9 @@ import { ContactData } from '@/data/types/client'
 
 export const contact: ContactData = {
   address: {
-    street: '123 Rue de Paris',
+    street: '31 Rue Henri Barbusse',
     city: '92300 Levallois-Perret',
-    full: '123 Rue de Paris, 92300 Levallois-Perret',
+    full: '31 Rue Henri Barbusse, 92300 Levallois-Perret',
   },
   phone: '01 23 45 67 89',
   phoneLink: '+33123456789',

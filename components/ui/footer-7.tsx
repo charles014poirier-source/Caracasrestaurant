@@ -110,9 +110,11 @@ export const Footer7 = ({
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
           <div className="flex-1 max-w-md">
             <a href={logo.url} className="inline-block mb-6">
-              <span className="font-serif text-3xl font-bold text-white/90 tracking-tight">
-                {config?.name.split(' ')[0] || 'Caracas'}<span className="text-white/60">.</span>
-              </span>
+              <img
+                src="/logo/cropped-footer-logo.png"
+                alt={config?.name || 'Caracas Bar & Tapas'}
+                className="h-16 w-auto"
+              />
             </a>
             <p className="text-white/80 leading-relaxed mb-6">
               {config?.description || description}

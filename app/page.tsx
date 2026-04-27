@@ -2,10 +2,8 @@
 import { caracasConfig } from '@/data/clients/caracas'
 import { contact } from '@/data/clients/caracas/contact'
 import { HeroSection } from '@/components/sections/HeroSection'
-import { VenezuelanFlagBackground } from '@/components/ui/VenezuelanFlagBackground'
 import { SignaturesSection } from '@/components/sections/SignaturesSection'
 import { StorySection } from '@/components/sections/StorySection'
-import { ExperienceSection } from '@/components/sections/ExperienceSection'
 import { GallerySection } from '@/components/sections/GallerySection'
 import { EventsSection } from '@/components/sections/EventsSection'
 import { ReviewsSection } from '@/components/sections/ReviewsSection'
@@ -38,44 +36,32 @@ export default function HomePage() {
 
   return (
     <>
-      <VenezuelanFlagBackground color="yellow" motif="food" opacity={0.1}>
-        <HeroSection
-          content={caracasConfig.content.hero}
-          config={caracasConfig.config}
-          todayHours={todayHours}
-        />
-      </VenezuelanFlagBackground>
-      <VenezuelanFlagBackground color="blue" motif="food" opacity={0.12}>
-        <SignaturesSection
-          items={caracasConfig.menu.signatureDishes}
-          config={caracasConfig.config.sections.signatures}
-        />
-      </VenezuelanFlagBackground>
-      <VenezuelanFlagBackground color="blue" motif="ethnic" opacity={0.08}>
-        <StorySection
-          content={caracasConfig.content.story}
-          glossary={caracasConfig.content.glossary}
-          config={caracasConfig.config.sections.story}
-        />
-      </VenezuelanFlagBackground>
-      <VenezuelanFlagBackground color="red" motif="nature" opacity={0.1}>
-        <ExperienceSection
-          experiences={caracasConfig.content.experiences}
-          config={caracasConfig.config.sections.experiences}
-        />
-      </VenezuelanFlagBackground>
-      <VenezuelanFlagBackground color="red" motif="nature" opacity={0.08}>
-        <GallerySection
-          images={caracasConfig.images.gallery}
-          config={caracasConfig.config.sections.gallery}
-        />
-      </VenezuelanFlagBackground>
-      <VenezuelanFlagBackground color="red" motif="festive" opacity={0.06}>
-        <EventsSection
-          events={events}
-          config={caracasConfig.config.sections.events}
-        />
-      </VenezuelanFlagBackground>
+      <HeroSection
+        content={caracasConfig.content.hero}
+        config={caracasConfig.config}
+        todayHours={todayHours}
+      />
+
+      <SignaturesSection
+        items={caracasConfig.menu.signatureDishes}
+        config={caracasConfig.config.sections.signatures}
+      />
+
+      <StorySection
+        content={caracasConfig.content.story}
+        glossary={caracasConfig.content.glossary}
+        config={caracasConfig.config.sections.story}
+      />
+
+      <GallerySection
+        images={caracasConfig.images.gallery}
+        config={caracasConfig.config.sections.gallery}
+      />
+
+      <EventsSection
+        events={events}
+        config={caracasConfig.config.sections.events}
+      />
       <ReviewsSection
         reviews={caracasConfig.content.reviews}
         rating="4.8"

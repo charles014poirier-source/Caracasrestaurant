@@ -361,45 +361,30 @@ export default function ContactContent() {
               </div>
             </div>
 
-            {/* Map placeholder */}
+            {/* Map */}
             <div className="mt-8">
-              <a
-                href={restaurantInfo.googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="aspect-video w-full bg-gradient-to-br from-slate-700 to-slate-900 relative">
-                  {/* Map background pattern */}
-                  <div className="absolute inset-0 opacity-30">
-                    <img
-                      src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
-                      alt="Google Maps"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
-
-                  {/* Content overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <MapPin className="w-8 h-8 text-white" />
-                      </div>
-                      <h4 className="text-white font-serif text-xl mb-2">
-                        Caracas Bar & Tapas
-                      </h4>
-                      <p className="text-white/80 text-sm mb-4">
-                        {restaurantInfo.street}, {restaurantInfo.city}
-                      </p>
-                      <div className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 rounded-full font-semibold shadow-lg group-hover:bg-white/90 transition-colors">
-                        <span>Ouvrir dans Google Maps</span>
-                        <MapPin className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
+              <div className="relative rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps?q=31+Rue+Henri+Barbusse,+92300+Levallois-Perret&output=embed"
+                  width="100%"
+                  height="350"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-xl"
+                  title="Carte Caracas Bar & Tapas - Levallois-Perret"
+                />
+                <a
+                  href={restaurantInfo.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-4 right-4 inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 font-medium text-sm"
+                >
+                  <MapPin className="w-4 h-4 text-primary-600" />
+                  <span>Ouvrir dans Google Maps</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

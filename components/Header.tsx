@@ -87,7 +87,7 @@ export function Header() {
               {/* Mobile: Burger menu */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 -ml-2 rounded-lg transition-all flex-shrink-0 text-neutral-900 hover:bg-background-100"
+                className="lg:hidden p-3 -ml-3 rounded-xl transition-all duration-300 flex-shrink-0 text-neutral-900 hover:bg-background-100 active:scale-95"
                 aria-label="Menu"
               >
                 {isMobileMenuOpen ? (
@@ -100,19 +100,23 @@ export function Header() {
               {/* Desktop Logo */}
               <div className="hidden lg:block flex-shrink-0 relative z-50">
                 <Link href="/" className="flex-shrink-0 block">
-                  <span className="font-serif text-2xl font-bold text-neutral-900 tracking-tight hover:text-secondary-600 transition-colors cursor-pointer">
-                    {caracasConfig.config.name.split(' ')[0]}<span className="text-secondary-500">.</span>
-                  </span>
+                  <img
+                    src="/logo/ChatGPT Image 23 avr. 2026 à 23_41_21.png"
+                    alt="Caracas Bar & Tapas"
+                    className="h-12 w-auto hover:opacity-80 transition-opacity"
+                  />
                 </Link>
               </div>
             </div>
 
             {/* Mobile: Centered Logo */}
-            <div className="lg:hidden absolute left-1/2 -translate-x-1/2 z-50">
-              <Link href="/" className="flex-shrink-0 block">
-                <span className="font-serif text-xl font-bold text-neutral-900 tracking-tight hover:text-secondary-600 transition-colors cursor-pointer">
-                  {caracasConfig.config.name.split(' ')[0]}<span className="text-secondary-500">.</span>
-                </span>
+            <div className="lg:hidden absolute left-1/2 -translate-x-1/2 z-50 flex items-center h-full">
+              <Link href="/" className="flex-shrink-0">
+                <img
+                  src="/logo/ChatGPT Image 23 avr. 2026 à 23_41_21.png"
+                  alt="Caracas Bar & Tapas"
+                  className="h-8 w-auto hover:opacity-80 transition-opacity"
+                />
               </Link>
             </div>
 
@@ -137,7 +141,7 @@ export function Header() {
                     href={contact.social[social.name.toLowerCase() as keyof typeof contact.social]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full flex items-center justify-center text-neutral-600 hover:text-secondary-600 hover:bg-background-100 transition-all duration-200"
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-neutral-600 hover:text-secondary-600 hover:bg-background-100 transition-all duration-300 hover:scale-110 hover:shadow-md"
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -171,13 +175,17 @@ export function Header() {
               <Link
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-serif text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight"
+                className="flex-shrink-0 flex items-center"
               >
-                {caracasConfig.config.name.split(' ')[0]}<span className="text-secondary-500">.</span>
+                <img
+                  src="/logo/ChatGPT Image 23 avr. 2026 à 23_41_21.png"
+                  alt="Caracas Bar & Tapas"
+                  className="h-8 w-auto"
+                />
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 -mr-2 text-neutral-600 hover:text-neutral-900 rounded-lg hover:bg-neutral-100 transition-all"
+                className="p-2 -mr-2 text-neutral-600 hover:text-neutral-900 rounded-lg hover:bg-neutral-100 transition-all duration-300"
                 aria-label="Fermer"
               >
                 <X className="w-6 h-6" />
@@ -193,7 +201,7 @@ export function Header() {
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={cn(
-                        'block px-4 sm:px-6 py-4 sm:py-5 rounded-xl text-base sm:text-lg font-semibold transition-all duration-200 text-center',
+                        'block px-4 sm:px-6 py-4 sm:py-5 rounded-xl text-base sm:text-lg font-semibold transition-all duration-300 text-center',
                         pathname === item.href || (item.href.startsWith('/#') && pathname === '/')
                           ? 'bg-secondary-50 text-secondary-700'
                           : 'text-neutral-900 hover:bg-secondary-50 hover:text-secondary-700'
@@ -221,7 +229,7 @@ export function Header() {
                     href={contact.social[social.name.toLowerCase() as keyof typeof contact.social]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-white text-neutral-600 hover:text-secondary-600 hover:bg-secondary-50 transition-all duration-200 border border-neutral-200 shadow-sm"
+                    className="w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-white text-neutral-600 hover:text-secondary-600 hover:bg-secondary-50 hover:scale-110 transition-all duration-300 border border-neutral-200 shadow-sm"
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -231,10 +239,10 @@ export function Header() {
 
               {/* Maps Link */}
               <a
-                href="https://maps.google.com"
+                href={contact.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-neutral-300 bg-white text-neutral-700 font-semibold hover:bg-neutral-50 transition-all duration-200 shadow-sm text-sm sm:text-base"
+                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-neutral-300 bg-white text-neutral-700 font-semibold hover:bg-neutral-50 transition-all duration-300 shadow-sm text-sm sm:text-base"
               >
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-secondary-600" />
                 <span>Itinéraire</span>

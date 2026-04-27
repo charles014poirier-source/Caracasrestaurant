@@ -17,7 +17,8 @@ export function SpotlightLink({ href, children, className = '' }: SpotlightLinkP
   const [isHovered, setIsHovered] = useState(false)
   const linkRef = useRef<HTMLAnchorElement>(null)
 
-  const isActive = pathname === href || (href.startsWith('/#') && pathname === '/')
+  // Active seulement pour les liens directs (pas les ancres)
+  const isActive = pathname === href
 
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!linkRef.current) return
@@ -42,35 +43,53 @@ export function SpotlightLink({ href, children, className = '' }: SpotlightLinkP
       ref={linkRef}
       href={href}
       className={cn(
-        'relative overflow-hidden text-base font-semibold transition-colors duration-200',
-        'py-2 px-3 -mx-3 rounded-lg',
-        isActive ? 'text-neutral-900' : 'text-neutral-700 hover:text-secondary-600',
-        className
+        'relative overflow-hidden text-base font-semibold transition-all duration-300',
+        'py-2 px-4 -mx-4 rounded-xl',
+        isActive
+          ? 'text-neutral-900'
+          : 'text-neutral-700 hover:text-neutral-900'
       )}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Background hover effect */}
+      <span
+        className={cn(
+          'absolute inset-0 rounded-xl pointer-events-none',
+          'bg-neutral-100/50',
+          'transition-all duration-300 ease-out',
+          isHovered || isActive ? 'opacity-100' : 'opacity-0'
+        )}
+      />
+
       {/* Spotlight effect */}
       <span
         className={cn(
           'absolute rounded-full pointer-events-none',
-          'bg-radial-gradient from-secondary-400/40 to-transparent',
-          'transition-opacity duration-150 ease-out',
-          isHovered ? 'opacity-100' : 'opacity-0'
+          'bg-gradient-radial from-secondary-400/25 via-secondary-400/5 to-transparent',
+          'transition-all duration-300 ease-out',
+          isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
         )}
         style={{
-          width: '200px',
-          height: '200px',
-          left: mousePosition.x - 100,
-          top: mousePosition.y - 100,
+          width: '250px',
+          height: '250px',
+          left: mousePosition.x - 125,
+          top: mousePosition.y - 125,
           transform: 'translate3d(0, 0, 0)',
           willChange: 'opacity, transform',
         }}
       />
 
+      {/* Active indicator bar - uniquement au clic (quand actif) */}
+      {isActive && (
+        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-secondary-500 rounded-full" />
+      )}
+
       {/* Content */}
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 inline-block">
+        {children}
+      </span>
     </Link>
   )
 }

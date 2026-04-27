@@ -6,7 +6,7 @@ export const hero = {
   location: 'Levallois-Perret',
   tagline: 'Cuisine vénézuélienne & tapas festives à Levallois',
   description: 'Inspiré de Caracas, revisité à Paris. Un voyage culinaire entre arepas, cachapas et cocktails créoles.',
-  backgroundImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80',
+  backgroundImage: '/images/caracas interieur.jpg',
   quickInfo: {
     rating: '4.8/5',
     reviewCount: '120+ avis',
@@ -21,7 +21,7 @@ export const story = {
     'Notre mission : vous faire voyager à travers les saveurs authentiques du Venezuela, depuis les arepas du petit-déjeuner jusqu\'aux cocktails du soir.',
     'Aujourd\'hui installés à Levallois, nous perpétuons cette tradition d\'accueil et de partage, où chaque plat raconte une histoire.',
   ],
-  image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+  image: '/images/caracas coktail.jpg',
   establishmentYear: 2015,
 }
 

@@ -37,7 +37,7 @@ export const seo: SeoData = {
     image: 'https://caracas-bar-tapas.fr/og-image.jpg',
     description: 'Inspiré de Caracas, revisité à Paris. Découvrez les arepas, cachapas et tapas vénézuéliennes dans une ambiance festive et chaleureuse à Levallois.',
     address: {
-      streetAddress: '123 Rue de Paris',
+      streetAddress: '31 Rue Henri Barbusse',
       addressLocality: 'Levallois-Perret',
       postalCode: '92300',
       addressCountry: 'FR',

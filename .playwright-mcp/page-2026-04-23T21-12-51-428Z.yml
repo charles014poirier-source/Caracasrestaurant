@@ -1,0 +1,156 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Caracas." [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: Caracas.
+      - navigation [ref=e9]:
+        - link "Menu" [ref=e10] [cursor=pointer]:
+          - /url: /menu
+          - text: Menu
+        - link "Histoire" [ref=e11] [cursor=pointer]:
+          - /url: /#histoire
+          - text: Histoire
+        - link "Galerie" [ref=e12] [cursor=pointer]:
+          - /url: /#galerie
+          - text: Galerie
+        - link "Privatisation" [ref=e13] [cursor=pointer]:
+          - /url: /#privatisation
+          - text: Privatisation
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - link "Instagram" [ref=e16] [cursor=pointer]:
+            - /url: https://www.instagram.com/holacaracas.paris/
+            - img [ref=e17]
+          - link "Facebook" [ref=e19] [cursor=pointer]:
+            - /url: https://www.facebook.com/caracas.bar.tapas
+            - img [ref=e20]
+          - link "LinkedIn" [ref=e22] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/caracas-paris/
+            - img [ref=e23]
+        - link "Réserver" [ref=e25] [cursor=pointer]:
+          - /url: /contact#reservation
+          - generic [ref=e26]: Réserver
+          - img [ref=e28]
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - heading "Test des motifs vénézuéliens" [level=1] [ref=e33]
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - heading "Food Motif (0.3 opacity)" [level=2] [ref=e36]
+          - paragraph [ref=e40]: Contenu de test par-dessus
+        - generic [ref=e41]:
+          - heading "Ethnic Motif (0.3 opacity)" [level=2] [ref=e42]
+          - paragraph [ref=e46]: Contenu de test par-dessus
+        - generic [ref=e47]:
+          - heading "Nature Motif (0.3 opacity)" [level=2] [ref=e48]
+          - paragraph [ref=e52]: Contenu de test par-dessus
+        - generic [ref=e53]:
+          - heading "Festive Motif (0.3 opacity)" [level=2] [ref=e54]
+          - paragraph [ref=e58]: Contenu de test par-dessus
+  - contentinfo [ref=e59]:
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - link "Caracas." [ref=e63] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e64]: Caracas.
+          - paragraph [ref=e65]: Inspiré de Caracas, revisité à Paris. Un voyage culinaire entre arepas, cachapas et cocktails créoles.
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - img [ref=e68]
+              - generic [ref=e71]: 123 Rue de Paris, 92300 Levallois-Perret
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - link "01 23 45 67 89" [ref=e75] [cursor=pointer]:
+                - /url: tel:0123456789
+            - generic [ref=e76]:
+              - img [ref=e77]
+              - link "contact@caracas-bar-tapas.fr" [ref=e80] [cursor=pointer]:
+                - /url: mailto:contact@caracas-bar-tapas.fr
+          - list [ref=e81]:
+            - listitem [ref=e82]:
+              - link "Instagram" [ref=e83] [cursor=pointer]:
+                - /url: https://www.instagram.com/holacaracas.paris/
+                - img [ref=e84]
+            - listitem [ref=e87]:
+              - link "Facebook" [ref=e88] [cursor=pointer]:
+                - /url: https://www.facebook.com/caracas.bar.tapas
+                - img [ref=e89]
+            - listitem [ref=e91]:
+              - link "LinkedIn" [ref=e92] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/caracas-paris/
+                - img [ref=e93]
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - heading "Navigation" [level=3] [ref=e100]
+            - list [ref=e101]:
+              - listitem [ref=e102]:
+                - link "Menu" [ref=e103] [cursor=pointer]:
+                  - /url: /menu
+              - listitem [ref=e104]:
+                - link "Notre histoire" [ref=e105] [cursor=pointer]:
+                  - /url: /#histoire
+              - listitem [ref=e106]:
+                - link "Galerie" [ref=e107] [cursor=pointer]:
+                  - /url: /#galerie
+              - listitem [ref=e108]:
+                - link "Privatisation" [ref=e109] [cursor=pointer]:
+                  - /url: /#privatisation
+          - generic [ref=e110]:
+            - heading "Liens utiles" [level=3] [ref=e111]
+            - list [ref=e112]:
+              - listitem [ref=e113]:
+                - link "Mentions légales" [ref=e114] [cursor=pointer]:
+                  - /url: /mentions-legales
+              - listitem [ref=e115]:
+                - link "Confidentialité" [ref=e116] [cursor=pointer]:
+                  - /url: /confidentialite
+        - generic [ref=e117]:
+          - heading "Horaires d'ouverture" [level=3] [ref=e118]:
+            - img [ref=e119]
+            - text: Horaires d'ouverture
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - generic [ref=e124]: lundi
+              - generic [ref=e125]: 19h00 - 23h00
+            - generic [ref=e126]:
+              - generic [ref=e127]: mardi
+              - generic [ref=e128]: Fermé
+            - generic [ref=e129]:
+              - generic [ref=e130]: mercredi
+              - generic [ref=e131]: 19h00 - 23h00
+            - generic [ref=e132]:
+              - generic [ref=e133]: jeudi
+              - generic [ref=e134]: 19h00 - 00h00
+            - generic [ref=e135]:
+              - generic [ref=e136]: vendredi
+              - generic [ref=e137]: 19h00 - 00h00
+            - generic [ref=e138]:
+              - generic [ref=e139]: samedi
+              - generic [ref=e140]: 18h00 - 00h00
+            - generic [ref=e141]:
+              - generic [ref=e142]: dimanche
+              - generic [ref=e143]: Fermé
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - img [ref=e150]
+          - generic [ref=e152]:
+            - heading "Réservez votre table" [level=4] [ref=e153]
+            - paragraph [ref=e154]: Places limitées • Week-end chargé
+        - link "Réserver" [ref=e155] [cursor=pointer]:
+          - /url: /contact#reservation
+          - img [ref=e156]
+          - generic [ref=e158]: Réserver
+          - img [ref=e159]
+      - generic [ref=e162]:
+        - paragraph [ref=e163]: © 2025 Caracas Bar & Tapas. Tous droits réservés.
+        - list [ref=e164]:
+          - listitem [ref=e165]:
+            - link "Mentions légales" [ref=e166] [cursor=pointer]:
+              - /url: /mentions-legales
+          - listitem [ref=e167]:
+            - link "Politique de confidentialité" [ref=e168] [cursor=pointer]:
+              - /url: /confidentialite
+  - button "Open Next.js Dev Tools" [ref=e174] [cursor=pointer]:
+    - img [ref=e175]
