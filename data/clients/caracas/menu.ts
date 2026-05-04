@@ -288,6 +288,8 @@ export const menu: MenuData = {
       image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&q=80',
       badges: ['bestseller'],
       category: 'arepas',
+      allergens: ['Gluten', 'Œufs', 'Lait'],
+      details: 'L\'arepa Reina Pepiada est un classique vénézuélien, créée en 1955. Son nom rend hommage à la première Miss Vénézuélienne, Susana Duijm. La combinaison du poulet rôti et de l\'avocat frais crée une harmonie parfaite de textures et de saveurs.',
     },
     {
       id: 'empanadas-sig',
@@ -297,6 +299,8 @@ export const menu: MenuData = {
       image: 'https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=600&q=80',
       badges: ['bestseller'],
       category: 'tapas',
+      allergens: ['Gluten', 'Lait', 'Œufs'],
+      details: 'Nos empanadas sont préparées maison chaque jour. La pâte est finement croustillante, et la farce est généreuse. Au fromage blanc fondant ou au bœuf mijoté avec des oignons et des poivrons.',
     },
     {
       id: 'pabellon-sig',
@@ -306,6 +310,8 @@ export const menu: MenuData = {
       image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=80',
       badges: ['bestseller'],
       category: 'plats',
+      allergens: ['Lait'],
+      details: 'Le Pabellón Criollo représente les couleurs du drapeau vénézuélien : le bœuf (noir), les haricots noirs, le riz blanc, et le plantain jaune. C\'est un plat complet et réconfortant, mijoté pendant des heures.',
     },
     {
       id: 'cachapa-sig',
@@ -315,6 +321,8 @@ export const menu: MenuData = {
       image: 'https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?w=600&q=80',
       badges: ['bestseller'],
       category: 'cachapas',
+      allergens: ['Œufs', 'Lait'],
+      details: 'La cachapa est une spécialité vénézuélienne à base de maïs doux frais. Notre recette utilise du fromage manoche, un fromage vénézuélien qui fond parfaitement. Le résultat est à la fois doux, salé et onctueux.',
     },
     {
       id: 'mojito-sig',
@@ -324,6 +332,8 @@ export const menu: MenuData = {
       image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80',
       badges: ['bestseller'],
       category: 'cocktails',
+      allergens: ['Sulfites'],
+      details: 'Notre Mojito Caracas est préparé avec du rhum vénézuélien, de la menthe fraîche du marché, et du citron vert pressé à la commande. Le sucre de cane apporte une touche authentique.',
     },
     {
       id: 'quesillo-sig',
@@ -333,6 +343,8 @@ export const menu: MenuData = {
       image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=600&q=80',
       badges: ['bestseller'],
       category: 'desserts',
+      allergens: ['Œufs', 'Lait'],
+      details: 'Le Quesillo est le dessert le plus populaire du Venezuela. Contrairement au flan classique, sa texture est plus légère et crémeuse. Notre caramel maison est préparé avec de la panela (sucre de cane non raffiné).',
     },
   ],
 }

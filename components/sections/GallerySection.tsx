@@ -58,16 +58,14 @@ export function GallerySection({ images, config }: GallerySectionProps) {
       <div className="relative max-w-6xl mx-auto">
         {/* Main carousel - approche container fixe */}
         <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] ring-1 ring-neutral-900/5">
-          {/* Image container avec background */}
+          {/* Image container */}
           <ScrollReveal direction="fade">
-            <div
-              className="absolute inset-0 transition-opacity duration-700 ease-in-out"
-              style={{
-                backgroundImage: `url(${images[currentIndex].src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center center',
-              }}
-            >
+            <div className="absolute inset-0 transition-opacity duration-700 ease-in-out">
+              <img
+                src={images[currentIndex].src}
+                alt={images[currentIndex].alt}
+                className="w-full h-full object-cover"
+              />
               {/* Overlay subtil pour unifier les images */}
               <div className="absolute inset-0 bg-black/10" />
             </div>
@@ -115,12 +113,12 @@ export function GallerySection({ images, config }: GallerySectionProps) {
                   : 'ring-neutral-200 hover:ring-neutral-300 opacity-60 hover:opacity-100'
               }`}
               aria-label={`Aller à l'image ${index + 1}`}
-              style={{
-                backgroundImage: `url(${image.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center center',
-              }}
             >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+              />
               {index === currentIndex && (
                 <div className="absolute inset-0 bg-primary-500/20 transition-opacity duration-300" />
               )}

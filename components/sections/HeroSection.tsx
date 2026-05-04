@@ -1,9 +1,12 @@
 // components/sections/HeroSection.tsx
+'use client'
+
 import { HeroContent, BrandingConfig } from '@/data/types/client'
 import { Button } from '@/components/Button'
 import { Star, Clock, MapPin, ArrowRight, Utensils } from 'lucide-react'
 import Link from 'next/link'
 import { VenezuelanPattern } from '@/components/ui/VenezuelanPattern'
+import { useEffect, useState, useRef } from 'react'
 
 interface HeroSectionProps {
   content: HeroContent
@@ -14,17 +17,44 @@ interface HeroSectionProps {
 export function HeroSection({ content, config, todayHours }: HeroSectionProps) {
   if (!content.enabled) return null
 
+  const [isVisible, setIsVisible] = useState(false)
+  const [scrollY, setScrollY] = useState(0)
+  const bgImageRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setIsVisible(true)
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Split tagline into words for animation
+  const words = content.tagline.split(' ')
+
   return (
     <section className="relative min-h-[90vh] flex items-center bg-neutral-900">
       <VenezuelanPattern opacity={0.05} />
 
-      {/* Background image with overlay */}
-      <div className="absolute inset-0">
-        <img
-          src={content.backgroundImage}
-          alt={`Ambiance du restaurant ${config.name}`}
-          className="w-full h-full object-cover"
-        />
+      {/* Background image with parallax overlay */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          ref={bgImageRef}
+          className="absolute inset-0 will-change-transform"
+          style={{
+            transform: `translateY(${scrollY * 0.4}px)`,
+            transition: 'transform 0.1s ease-out',
+          }}
+        >
+          <img
+            src={content.backgroundImage}
+            alt={`Ambiance du restaurant ${config.name}`}
+            className="w-full h-full object-cover scale-110"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/75 via-neutral-900/70 to-neutral-900" />
       </div>
 
@@ -33,8 +63,22 @@ export function HeroSection({ content, config, todayHours }: HeroSectionProps) {
           <p className="text-primary-400 font-semibold tracking-wide uppercase mb-4 animate-fade-in">
             {content.location}
           </p>
-          <h1 className="font-serif text-display-lg text-white mb-6 animate-slide-up leading-tight">
-            {content.tagline}
+          <h1 className="font-serif text-display-lg text-white mb-6 leading-tight overflow-hidden">
+            <span className="inline-block">
+              {words.map((word, wordIndex) => (
+                <span
+                  key={wordIndex}
+                  className="inline-block mr-3 animate-slide-up"
+                  style={{
+                    animationDelay: `${wordIndex * 0.1}s`,
+                    opacity: isVisible ? 1 : 0,
+                    transform: isVisible ? 'translateY(0)' : 'translateY(30px)'
+                  }}
+                >
+                  {word}
+                </span>
+              ))}
+            </span>
           </h1>
           <p className="text-xl lg:text-2xl text-neutral-100 mb-8 leading-relaxed animate-slide-up stagger-1">
             {content.description}
@@ -43,7 +87,7 @@ export function HeroSection({ content, config, todayHours }: HeroSectionProps) {
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12 animate-slide-up stagger-2">
             <Button
               size="lg"
-              className="!bg-gradient-to-r !from-secondary-400 !to-secondary-600 !text-white !border-0 hover:!shadow-glow hover:!scale-105 hover:!from-secondary-300 hover:!to-secondary-500 transition-all duration-300 !rounded-full relative overflow-hidden group !px-8 !py-6"
+              className="!bg-gradient-to-r !from-secondary-400 !to-secondary-600 !text-white !border-0 hover:!shadow-glow hover:!scale-105 hover:!from-secondary-300 hover:!to-secondary-500 transition-all duration-300 !rounded-full relative overflow-hidden group !px-6 !py-4 !text-sm md:!px-8 md:!py-6 md:!text-base"
               asChild
             >
               <Link href={config.cta.primary.href} className="relative z-10">
@@ -69,7 +113,7 @@ export function HeroSection({ content, config, todayHours }: HeroSectionProps) {
               <Button
                 size="lg"
                 variant="outline"
-                className="!bg-white/10 !backdrop-blur-sm !text-white !border-2 !border-white/30 hover:!bg-white/20 hover:!border-white/50 hover:!scale-105 transition-all duration-300 !rounded-full"
+                className="!bg-white/10 !backdrop-blur-sm !text-white !border-2 !border-white/30 hover:!bg-white/20 hover:!border-white/50 hover:!scale-105 transition-all duration-300 !rounded-full !px-6 !py-4 !text-sm md:!px-8 md:!py-6 md:!text-base"
                 asChild
               >
                 <a href={config.cta.secondary.href} target="_blank" rel="noopener noreferrer">

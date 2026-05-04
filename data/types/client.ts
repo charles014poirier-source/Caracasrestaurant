@@ -257,6 +257,8 @@ export interface SignatureDish {
   image: string
   badges: BadgeType[]
   category: string
+  allergens?: AllergenType[]
+  details?: string
 }
 
 // Événements et avis

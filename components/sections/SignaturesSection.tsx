@@ -26,7 +26,7 @@ export function SignaturesSection({ items, config }: SignaturesSectionProps) {
           description="Les plats qui ont fait notre réputation. Une invitation au voyage gustatif."
         />
       </ScrollReveal>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
         {items.map((dish, index) => (
           <ScrollReveal key={dish.id} direction="up" delay={index * 0.1}>
             <SignatureCard {...dish} />
