@@ -101,7 +101,7 @@ export function Header() {
               <div className="hidden lg:block flex-shrink-0 relative z-50">
                 <Link href="/" className="flex-shrink-0 block">
                   <img
-                    src="/logo/ChatGPT Image 23 avr. 2026 à 23_41_21.png"
+                    src="/logo/header-logo.png"
                     alt="Caracas Bar & Tapas"
                     className="h-12 w-auto hover:opacity-80 transition-opacity"
                   />
@@ -113,7 +113,7 @@ export function Header() {
             <div className="lg:hidden absolute left-1/2 -translate-x-1/2 z-50 flex items-center h-full">
               <Link href="/" className="flex-shrink-0">
                 <img
-                  src="/logo/ChatGPT Image 23 avr. 2026 à 23_41_21.png"
+                  src="/logo/header-logo.png"
                   alt="Caracas Bar & Tapas"
                   className="h-8 w-auto hover:opacity-80 transition-opacity"
                 />
@@ -178,7 +178,7 @@ export function Header() {
                 className="flex-shrink-0 flex items-center"
               >
                 <img
-                  src="/logo/ChatGPT Image 23 avr. 2026 à 23_41_21.png"
+                  src="/logo/header-logo.png"
                   alt="Caracas Bar & Tapas"
                   className="h-8 w-auto"
                 />
